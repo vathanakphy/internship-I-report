@@ -1,0 +1,11 @@
+Based on the problem that address in the exritng sysyem , the main object of this project was to contioute developing and impoveming the exisign QR base attendance sysyem. i need many feature to complte the bussines requiment and operate more relidable.
+
+Main part is make this project suitable for current situation of the staff and working relieable less error prone and can be exenble to feaminly company. since attendac data is very impormrent so they need a system that woking smooth and accuracy if somerring wrong it will affect the payroll.
+
+Firsting is is about impove performc of the application old project is built for work but now we see the big picture so we need to anlayis and fint the issus propose solution to make the app response faster. it also include the automation part as well which deliver the better system and accurate.
+
+antoehring is about UX/UI improvement make less confues for HR staff, and team lean in each depamrtent and also for staff that check attednacne aswell.UX is very impvoemnt the confure make it sill case inaccuratyu of the attendance data.
+
+Condut a use resrach and propose the sultion to them not only working alone we need to ask HR , team lead, CTO someone who control the attendnac eidentify thire manul working and propose sulition and impmentaion in the sysyem to make thire work more productive.
+
+Overall that object of this project is to ehnace the current system and deliver new feature to meet the real business usage and also make a relisable sysyem and project that acan be exteanable and maintainer for the next developer .

@@ -1,0 +1,47 @@
+1.2. Presentation of Organization 
+This section provides brief information about SINET to understand the company background, services, and overall perspective.
+1.2.1. General Information of Company
+
+SINET is a specialized Internet and Telecom Service Provider in Cambodia. The company focuses on delivering high-performance connectivity solutions supported by strong engineering capabilities and reliable customer support.
+
+SINET operates under S.I Group Co., Ltd., a diversified Cambodian group. The company has developed a nationwide infrastructure, including Fiber Optic, DWDM, SDH, and Metro Ethernet networks. With more than 200 network Points of Presence (POPs), SINET provides coverage across cities, provinces, and remote areas in Cambodia.
+
+Since its establishment in 2009, SINET has expanded its network and strengthened its telecom backbone, becoming an important provider supporting both business and residential connectivity.
+
+1.2.2. Service of Company 
+
+The main services provided by SINET include:
+
+- Fiber internet services for businesses and individuals
+- Enterprise connectivity solutions
+- Telecom infrastructure services such as DWDM, SDH, and Metro Ethernet
+- Corporate network solutions
+- Nationwide connectivity and technical support services
+
+These services are designed to ensure reliable, high-speed communication and support business operations.
+
+1.2.3. Vision and Mission 
+
+Vision:
+
+To empower businesses and individuals in Cambodia with seamless and high-speed communication anytime and anywhere.
+
+Mission:
+- Deliver high-quality Internet and Telecom services through engineering excellence
+- Provide a one-stop ICT solution
+- Ensure reliable and responsive customer support
+- Promote high professional standards among employees
+
+1.2.4 Organization Chart
+
+The company is organized into several main departments that support its business and technical operations. During my internship, I was assigned to the Engineering & Operations Department as a Software Developer Intern.
+
+1.2.5 Address and Contact
+
+SINET’s head office is located at S.I Building #93, Preah Sihanouk Boulevard, Phnom Penh, Cambodia. The head office is the main location for central operations, administration, and coordination between departments, while the company also has many branches across Cambodia, including main cities and rural areas.
+
+For administrative communication, the relevant contact point is the HR & Administration Department of SINET.
+
+HR & Administration
+Tel: (+855) 81 201 999
+Email: hr@sinet.com.kh

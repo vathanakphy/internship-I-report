@@ -1,0 +1,91 @@
+2.4 planning
+task is procid base on business priority while it provide direct from the end user with no dead line as internshin they dont want to work under pressure so to ge the new task only when we done the current task and relase. so i task i get is come from CTO,HR and team lead someone who use system the most. the syetem is already orepation in real condition of company the goal is to update smallthing and impveotn exsitng. wo the work is devide into the small phase by do it step by step straing from Otimizeation , imvepoent ment , featuring, QA.
+
+Dev lifecycle
+
+The projet planning is that we complre one task adn then went to QA while tesing if have bux it incude hot fix in tesing env or prod env, after evering is done aplly to prod step by step. making small change less tick .and befor erelateise CTO is review projet and then pass me to wok with sysyem enginner to starting deploy the project.
+
+task break down 
+
+---------------------------
+The project planning was based on business priority and user requirements. Since the Attendance System was already operating in the real company environment, the work was not planned as a fixed project with strict deadlines. Instead, tasks were assigned step by step based on priority, system issues, and requests from the main users of the system.
+
+Most tasks were requested or reviewed by the CTO, HR staff, and team leaders, who were directly involved in using or managing the Attendance System. The development process focused on completing one task or feature first, testing it, fixing issues, and then preparing it for release before moving to the next task. This approach helped reduce pressure and lower the risk of affecting the production system.
+
+The project work was divided into several phases, starting from system optimization, QR enhancement, feature improvement, company structure improvement, leave management, report analysis, quality assurance, and maintenance. Each phase was handled based on business impact, approval, and system readiness.
+
+The development lifecycle followed during the project can be summarized as follows:
+
+Analyze the requirement or problem reported by users.
+Discuss and confirm the expected result with the CTO, HR staff, or team leaders.
+Implement the feature or improvement in the development environment.
+Test the feature and fix bugs found during testing.
+Prepare the feature for pre-production or production release.
+Allow the CTO to review the work.
+Coordinate with the system engineer for deployment.
+Monitor the result after release and apply hotfixes if needed.
+
+Since the system was related to real attendance data and payroll processing, changes had to be released carefully. Small and controlled changes were preferred because they were easier to test, review, and rollback if problems occurred.
+
+The task breakdown of the project is shown below:
+-----------------------------
+
+WBS Code	Work Package	Task Description	Priority	Release / Remark
+1	Optimization	Improve system performance and report handling	High / Medium	Released on 13 May 2026
+1.1	Server-side Pagination	Move pagination processing to the server side	High	
+1.2	Server-side Search	Move search processing to the server side	High	
+1.3	Attendance Export	Move attendance data export to the server side	Medium	
+1.4	Attendance Report Filter	Add department filter to attendance report	Medium	
+2	QR Enhancement	Improve QR-based attendance scanning	High / Medium	Released on 21 May 2026
+2.1	Multiple Network Support	Allow QR attendance to support multiple networks	High	
+2.2	QR Deep Link	Apply deep link to QR code for easier Mini App access	Medium	
+2.3	QR Compatibility	Support both new QR code and old QR code formats	Medium	
+3	Shift Management	Improve shift planning and staff schedule management	High / Medium	
+3.1	Team Shift Management	Manage shift plans by team	Medium	
+3.2	Attendance Automation	Create automation script for attendance checking	High	
+3.3	Manager Dashboard	Create manager dashboard and assignment workflow	High	
+3.4	Superuser Plan View	Allow superuser to view all shift plans	High	
+3.5	Fixed Shift Assignment	Assign fixed shifts to teams	High	
+3.6	Shift Export Improvement	Include day information such as Monday and Tuesday in Excel export	Medium	
+3.7	Migration Research	Research Django migration for system changes	Low	
+4	Company Structure and Access Control	Improve company-level data structure and access permission	High / Medium	
+4.1	Company Level Structure	Apply company level to the system	Medium	
+4.2	RBAC Setup	Set up role-based access control for admin users	Medium	
+4.3	Data Protection	Prevent data leakage between companies	High	
+4.4	Branch Enhancement	Improve company, network, and QR configuration for branches	Medium	
+4.5	Admin View Update	Add company section and filters in admin views	Medium	
+4.6	Staff Branch Update	Assign missing branch information for staff	Medium	
+4.7	Telegram Group Configuration	Move Telegram group configuration to database	Low	
+5	Leave Management	Improve leave record and attendance integration	High / Medium	
+5.1	Staff Leave Record	Record staff leave in the system	Medium	
+5.2	Leave Summary	Create leave summary report	Medium	
+5.3	Leave Calendar	Add leave calendar view	Medium	
+5.4	Half-day Leave	Handle half-day leave conditions	Medium	
+5.5	Leave Exception Automation	Update attendance automation script with leave exceptions from database	Medium	
+5.6	Cron in Docker Compose	Move cron job to run with Docker Compose	Low	
+5.7	Leave-Attendance Sync	Sync leave records with attendance checking flow	High	
+5.8	Multiple Leave Types	Handle annual leave, sick leave, unpaid leave, and other leave types	Medium	
+6	Report Analysis	Improve attendance reports for HR and payroll usage	High / Medium	
+6.1	Attendance Calculation Research	Research attendance calculation logic	Medium	
+6.2	Monthly Summary Report	Export monthly attendance summary report	Medium	
+6.3	Monthly Staff Detail Report	Prepare monthly staff detail report for attendance deduction	High	
+6.4	Daily Detail Report	Prepare daily detail attendance report	High	
+6.5	Address Column	Add actual address column in report	Low	
+7	QA and Maintenance	Test, fix, and maintain the system before and after release	High	
+7.1	Pre-production Testing	Conduct pre-production testing for optimization release	High	
+7.2	Bug Fixing	Fix multiple bugs found in pre-production	High	
+7.3	Mini App Logic Update	Bring old logic to the new Mini App	High	Updated on 25 May 2026
+7.4	Mini App Bug Fix	Fix GPS and geolocation permission comparison logic	High	Updated on 22 May 2026
+8	Improvement and Documentation	Improve maintainability, auditability, and future support	High / Low	
+8.1	Telegram Skip Login	Improve Telegram login using chat ID on first load	Low	
+8.2	Profile Logic	Enhance profile logic from sidebar	Low	
+8.3	Service Layer Proposal	Propose Model, Service, and View layer structure	Low	
+8.4	Restore Deleted Data	Restore data that was already deleted	High	
+8.5	Change Log	Apply log for every data change and track who performed the action	High	
+8.6	End-to-End Testing	Conduct end-to-end testing of the whole system	High	Tested on 27 May 2026
+8.7	Pre-production Environment	Prepare pre-production environment with current development features	High	28-May-26
+8.8	Technical Specification	Write detailed technical specification document for the project	High	
+8.9	Redirect Improvement	Redirect properly after actions in preset and attendance modules	Low	
+----------------------------
+
+Overall, the planning of the project followed an iterative development approach. The work was divided into small phases so that each improvement could be analyzed, developed, tested, reviewed, and released with lower risk. This approach was suitable because the system was already used in daily operations and any issue could affect attendance tracking, HR work, and payroll preparation.

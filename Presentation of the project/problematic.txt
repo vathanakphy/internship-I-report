@@ -1,0 +1,29 @@
+2.2. Problematic
+Before QR code base attendance system the company they use the old approach is biometric scanner while it include many error promt and data lost, onemore thing it cost expenstive that we need to install those device for all branch while SINET have more than 20 branch across the Cambodia it will drain the buget just speding for tracking attendcne. Biometice device scanner is not easy ot rregiter staff; and astaff it self dont have thrie record to complte with HR when attneda is error as well. and then onemething is that every time HR is need to manulty bulding the attendance report for payroll whiel it time comsuming and more expensice becsaue they need to speing many time to do the same job. it double cost. and during the ruch hour when we come to work we will in the line just for checking the attednacne becuse this device is install only one per branch. and if we have an relation company or Compnay unser the SINET so we hard to devide them to use an exign bio device. 
+
+To solve this limitation , the CTO is intoruce QR-base attendance system. that solve the problem which it can tracking all of the staff for all branch but not final solution while thire current application have some performce issus and can handle normal operation check in and checkout. but the staff is working flexible, we have leave, holiday, final report for payroll , missing staff, more secure and hard to by pass. and also extend to Other company to use the same sysem as well while thrie first is built jut for using only in SINET. some UX issus for the current application and less of automation traking while they can record only the staff taht check attencaane, UX issus make some dubplicate attendance.
+
+so that why the CTO is introduce the QR base attendance system with run in mini app for the staff it easy quick and cheap can handle across multiple branch of the organization. the new attendance system is solve the problem that they face above. with the new system staff just scan qr using thire phone that hve telegram and they can havae thire attendce histry record while HR they have an automaiton to for report and payroll so they just doenload the ready report every month. after introduce this system that save amount of buget of orgationaiton and hanle attendance more effectively.
+
+----------------------------
+2.2 Problematic
+
+Before the QR-based attendance system was introduced, the company used biometric scanners to record employee attendance. However, this approach created several challenges for the organization, especially because SINET has many branches across Cambodia.
+
+One of the main problems was the cost of installing and maintaining biometric devices in every branch. Since each branch needed physical attendance devices, the company had to spend more budget on hardware, installation, and maintenance. This approach became less efficient when the organization expanded to more branches and related companies.
+
+Another issue was the difficulty of managing attendance records. Biometric devices could sometimes produce errors or incomplete records, and employees did not have direct access to check their own attendance history. When attendance issues occurred, staff had to contact HR to verify or correct the records.
+
+The attendance process also created delays during busy hours. Since the biometric device was usually installed in a fixed location, employees often had to wait in line to check in or check out, especially during morning working hours.
+
+In addition, HR staff needed to prepare attendance reports manually for payroll processing. This process was time-consuming and increased the workload of the HR department. Manual report preparation also increased the risk of mistakes when handling attendance data from multiple branches.
+
+Because of these limitations, the company needed a more flexible, cost-effective, and efficient attendance solution that could support multiple branches, reduce manual work, improve attendance tracking, and allow employees to access their own attendance records more easily.
+
+To respond to these needs, the company introduced a QR-based Attendance System under the direction of the Chief Technology Officer. This system helped solve many limitations of the previous biometric approach by allowing staff to record attendance through QR code scanning and supporting attendance tracking across different branches.
+
+However, the QR-based Attendance System was not yet a final or fully complete solution. The existing system could support normal check-in and check-out operations, but it still needed further improvement to support real business requirements. These requirements included flexible working schedules, fixed shifts, leave management, public holidays, missing attendance tracking, payroll reports, system security, and support for other related companies under the same group.
+
+There were also some performance and user experience issues in the existing application. Some workflows were not fully automated, and the system mainly recorded staff who successfully checked attendance. It still needed better handling for absent staff, incomplete attendance records, duplicate attendance cases, and reporting accuracy.
+
+Therefore, the main problem of the project was not to build a new attendance system from the beginning, but to continue improving the existing QR-based Attendance System so that it could become more complete, reliable, secure, and suitable for daily HR operations across multiple branches and companies.

@@ -1,0 +1,15 @@
+2. Presentation of the Project
+This chapter presents the Attendance System project carried out during my internship at SINET. It provides a general overview of the project, the main problems identified in the existing system, the objectives of the project, and the planning followed during the internship period.
+2.1 General Presentations of Project
+For this internship i work on building and maintain the internal company attendance system while this system is use to tracking attendance for all of the staff not only in the head office but across multiple branch in the Cambodia. This system is record attendance by using QR code scanner from the telegram miniapp and also handle employee for both that have working flexible shift and fixed shift all while it the complexitiy of the project. it assist the HR opretion inrealte to attendance and this system is very useful for payroll which is addtendace is relate to the paylib of empoyee.
+This project is not new develop me, it develop Over 2 year with 3 developer already and me is the forth person that handle this project. While the system is isnlude the adminpanel is the Back office , abckend api, telegram miniapp, automation aswell. this is forcus on the main user expiences goal while telegam is the main base application in Cambodia society so we try to use exting reouce to cret the new digital sulutions.
+
+-------------------------------
+2.1 General Informaiton of Project
+For this internship, I worked on building and maintaining the internal company Attendance System. This system is used to track attendance for all staff, not only at the head office but also across multiple branches in Cambodia.
+
+The system records attendance by using QR code scanning through the Telegram Mini App. It also handles employees who work under both flexible shifts and fixed shifts, which makes the project more complex. The system supports HR operations related to attendance management and is also useful for payroll, because employee attendance is directly related to salary calculation.
+
+This project was not newly developed by me. It has been developed for over two years by three previous developers, and I am the fourth person to handle and continue improving this project. The system includes the Back Office admin panel, backend API, Telegram Mini App, and automation processes.
+
+The project focuses on improving the user experience and making attendance management easier for employees and HR staff. Since Telegram is widely used in Cambodian society, the system uses an existing familiar platform to create a practical digital solution for attendance management.
