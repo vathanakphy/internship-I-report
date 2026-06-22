@@ -1,0 +1,39 @@
+5.3 Data Migration
+
+Data migration was an important part of the implementation process because several new features required changes to the existing database structure and production data. Since the Attendance System already contained real employee, branch, shift, QR, holiday, and attendance records, migration had to be handled carefully to prevent data loss, broken relationships, and incorrect reports.
+
+The migration work included schema changes, data backfilling, validation, and rollback planning. All migration changes were tested in the Pre-Production environment before being considered for Production deployment.
+
+a. QR and Network Migration
+
+One migration was related to QR code and network validation. The old validation logic depended on a QR hash value, but the updated process no longer required the hash field. Instead, validation was based mainly on QR ID, branch ID, and GPS information.
+
+The migration changed network_info.gps and qrcodes.hash from required fields to optional fields, while qrcodes.gps remained required. The related forms were also updated so optional values were grouped under optional fields, while important location data remained visible and required.
+
+This change made the QR setup more flexible while still keeping GPS-based validation active.
+
+b. Shift and Employee Data Backfill
+
+Another migration was created to prepare employee base shifts, shift plans, and public holiday data. The migration assigned employee base shifts based on department rules, configured fixed shift templates, created shift plan assignments, and filled missing public holiday month and day values when needed.
+
+To reduce risk, the data backfill was executed inside a database transaction. If validation failed, the data changes were rolled back automatically and were not committed. Validation checked important conditions such as required shift records, employee shift assignments, duplicate assignments, and missing holiday data.
+
+This step was important because shift data directly affects attendance calculation, working hours, day-off detection, and report accuracy.
+
+c. Company Structure Migration
+
+A larger migration was introduced to support company-based data structure. The main purpose was to separate SI.GROUP and Sayon data more clearly and connect branches, departments, employees, shifts, and public holidays to the correct company ownership.
+
+The company migration followed a controlled order. It first ensured that required company records existed, then mapped branches and departments to the correct company. After that, employees were aligned with the correct company, department, position, and team. Shift records, attendance shift links, report links, and public holidays were also updated to match the new company structure.
+
+This migration was important because company ownership affects permissions, attendance filtering, report results, and data visibility. Incorrect company mapping could cause users to see the wrong data or generate inaccurate reports.
+
+d. Validation and Rollback Strategy
+
+Validation was performed before committing migration results. The migration checked whether companies, branches, departments, employees, shifts, and attendance-required users were correctly aligned. If validation failed, the data transaction was rolled back to prevent incomplete or incorrect data from being saved.
+
+A marker-based rollback strategy was also used. Marker records tracked which data was created or changed by the migration, including old values before updates. This allowed rollback to restore changed fields and remove migration-created records more safely.
+
+The rollback process could revert marker-tracked data such as employee base shifts, shift assignments, updated shift values, public holiday changes, and company-related records created during migration. However, database backup was still required because not all schema changes could be fully reversed by the rollback script.
+
+Overall, the data migration process helped the Attendance System move from the old structure to a more flexible and company-aware structure. By using Pre-Production testing, transaction-based backfilling, validation, marker tracking, and rollback planning, the migration reduced deployment risk and improved data reliability.

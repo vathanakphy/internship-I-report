@@ -1,0 +1,12 @@
+Today task is that 
+	- document automation script for check attendance
+ 	- simulate rollback and tesing pre prod server
+	- leave issus (multiple half day)
+	- fix auth flow (future prevention)
+	- Learning Jenkins (write jenkin pipeline, pull code to run from github, triger when code is push)
+
+
+
+
+
+plan next; deploy when possible ; learn jenkin work with ssh to server perform a small task

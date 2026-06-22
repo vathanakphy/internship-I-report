@@ -1,0 +1,977 @@
+-- DROP SCHEMA public;
+
+CREATE SCHEMA public AUTHORIZATION postgres;
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+-- DROP SEQUENCE public.activity_log_id_seq;
+
+CREATE SEQUENCE public.activity_log_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.attendances_id_seq;
+
+CREATE SEQUENCE public.attendances_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.attendances_report_id_seq;
+
+CREATE SEQUENCE public.attendances_report_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.auth_group_id_seq;
+
+CREATE SEQUENCE public.auth_group_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.auth_group_permissions_id_seq;
+
+CREATE SEQUENCE public.auth_group_permissions_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.auth_permission_id_seq;
+
+CREATE SEQUENCE public.auth_permission_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.bluetooths_id_seq;
+
+CREATE SEQUENCE public.bluetooths_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.branchs_id_seq;
+
+CREATE SEQUENCE public.branchs_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.branchs_permission_branch_id_id_seq;
+
+CREATE SEQUENCE public.branchs_permission_branch_id_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.branchs_permission_id_seq;
+
+CREATE SEQUENCE public.branchs_permission_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.companies_id_seq;
+
+CREATE SEQUENCE public.companies_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.company_branch_access_id_seq;
+
+CREATE SEQUENCE public.company_branch_access_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.controllers_category_id_seq;
+
+CREATE SEQUENCE public.controllers_category_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.controllers_id_seq;
+
+CREATE SEQUENCE public.controllers_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.controllers_permission_id_seq;
+
+CREATE SEQUENCE public.controllers_permission_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.data_change_logs_id_seq;
+
+CREATE SEQUENCE public.data_change_logs_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.departments_id_seq;
+
+CREATE SEQUENCE public.departments_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.django_admin_log_id_seq;
+
+CREATE SEQUENCE public.django_admin_log_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.django_content_type_id_seq;
+
+CREATE SEQUENCE public.django_content_type_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.django_migrations_id_seq;
+
+CREATE SEQUENCE public.django_migrations_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.employee_attendances_id_seq;
+
+CREATE SEQUENCE public.employee_attendances_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.employee_mission_branches_id_seq;
+
+CREATE SEQUENCE public.employee_mission_branches_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.employee_shifts_id_seq;
+
+CREATE SEQUENCE public.employee_shifts_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.employees_id_seq;
+
+CREATE SEQUENCE public.employees_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.leave_balances_id_seq;
+
+CREATE SEQUENCE public.leave_balances_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.leave_records_id_seq;
+
+CREATE SEQUENCE public.leave_records_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.leave_types_id_seq;
+
+CREATE SEQUENCE public.leave_types_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.migration_backfill_markers_id_seq;
+
+CREATE SEQUENCE public.migration_backfill_markers_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.network_info_id_seq;
+
+CREATE SEQUENCE public.network_info_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.notifications_id_seq;
+
+CREATE SEQUENCE public.notifications_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.positions_id_seq;
+
+CREATE SEQUENCE public.positions_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.public_holidays_id_seq;
+
+CREATE SEQUENCE public.public_holidays_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.qrcodes_id_seq;
+
+CREATE SEQUENCE public.qrcodes_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.sale_survey_users_id_seq;
+
+CREATE SEQUENCE public.sale_survey_users_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.sale_surveys_id_seq;
+
+CREATE SEQUENCE public.sale_surveys_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.scanner_qr_id_seq;
+
+CREATE SEQUENCE public.scanner_qr_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.shift_plan_assignments_id_seq;
+
+CREATE SEQUENCE public.shift_plan_assignments_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.shift_plans_id_seq;
+
+CREATE SEQUENCE public.shift_plans_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.shifts_id_seq;
+
+CREATE SEQUENCE public.shifts_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.teams_id_seq;
+
+CREATE SEQUENCE public.teams_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.tokens_id_seq;
+
+CREATE SEQUENCE public.tokens_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.user_group_id_seq;
+
+CREATE SEQUENCE public.user_group_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.users_groups_id_seq;
+
+CREATE SEQUENCE public.users_groups_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.users_id_seq;
+
+CREATE SEQUENCE public.users_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+-- DROP SEQUENCE public.users_user_permissions_id_seq;
+
+CREATE SEQUENCE public.users_user_permissions_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;-- public.auth_group definition
+
+-- Drop table
+
+-- DROP TABLE public.auth_group;
+
+CREATE TABLE public.auth_group ( id int4 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(150) NOT NULL, CONSTRAINT auth_group_name_key UNIQUE (name), CONSTRAINT auth_group_pkey PRIMARY KEY (id));
+CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (name varchar_pattern_ops);
+
+
+-- public.branchs definition
+
+-- Drop table
+
+-- DROP TABLE public.branchs;
+
+CREATE TABLE public.branchs ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, code varchar(10) NULL, "name" varchar(50) NULL, prefix_invoice_code varchar(30) NULL, bank_account varchar(200) NULL, bank_name varchar(200) NULL, bank_address varchar(200) NULL, swift_code varchar(200) NULL, vat_number varchar(30) NULL, branch_phone varchar(15) NULL, branch_email varchar(320) NULL, company_name varchar(200) NULL, branch_address varchar(200) NULL, prefix_code varchar(200) NULL, branch_code varchar(200) NULL, branch_index int4 NULL, active bool NOT NULL, CONSTRAINT branchs_pkey PRIMARY KEY (id));
+
+
+-- public.companies definition
+
+-- Drop table
+
+-- DROP TABLE public.companies;
+
+CREATE TABLE public.companies ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, code varchar(30) NULL, "name" varchar(200) NOT NULL, active bool NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, CONSTRAINT companies_code_key UNIQUE (code), CONSTRAINT companies_name_key UNIQUE (name), CONSTRAINT companies_pkey PRIMARY KEY (id));
+CREATE INDEX companies_code_6d894935_like ON public.companies USING btree (code varchar_pattern_ops);
+CREATE INDEX companies_name_2cc40419_like ON public.companies USING btree (name varchar_pattern_ops);
+
+
+-- public.controllers_category definition
+
+-- Drop table
+
+-- DROP TABLE public.controllers_category;
+
+CREATE TABLE public.controllers_category ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, module_name varchar(200) NOT NULL, module_type varchar(200) NOT NULL, active bool NOT NULL, CONSTRAINT controllers_category_pkey PRIMARY KEY (id));
+
+
+-- public.data_change_logs definition
+
+-- Drop table
+
+-- DROP TABLE public.data_change_logs;
+
+CREATE TABLE public.data_change_logs ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, table_name varchar(100) NOT NULL, object_id varchar(64) NOT NULL, "action" varchar(10) NOT NULL, old_data jsonb NULL, new_data jsonb NULL, actor_id int4 NULL, actor_name varchar(255) NOT NULL, restored_from_log_id int4 NULL, created_at timestamptz NOT NULL, CONSTRAINT data_change_logs_pkey PRIMARY KEY (id));
+CREATE INDEX data_change_logs_action_731ecc04 ON public.data_change_logs USING btree (action);
+CREATE INDEX data_change_logs_action_731ecc04_like ON public.data_change_logs USING btree (action varchar_pattern_ops);
+CREATE INDEX data_change_logs_actor_id_b129c288 ON public.data_change_logs USING btree (actor_id);
+CREATE INDEX data_change_logs_created_at_863f31bd ON public.data_change_logs USING btree (created_at);
+CREATE INDEX data_change_logs_table_name_f3647d8b ON public.data_change_logs USING btree (table_name);
+CREATE INDEX data_change_logs_table_name_f3647d8b_like ON public.data_change_logs USING btree (table_name varchar_pattern_ops);
+CREATE INDEX dcl_action_idx ON public.data_change_logs USING btree (action);
+CREATE INDEX dcl_actor_idx ON public.data_change_logs USING btree (actor_id);
+CREATE INDEX dcl_created_at_idx ON public.data_change_logs USING btree (created_at);
+CREATE INDEX dcl_table_object_idx ON public.data_change_logs USING btree (table_name, object_id);
+
+
+-- public.django_content_type definition
+
+-- Drop table
+
+-- DROP TABLE public.django_content_type;
+
+CREATE TABLE public.django_content_type ( id int4 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 CACHE 1 NO CYCLE) NOT NULL, app_label varchar(100) NOT NULL, model varchar(100) NOT NULL, CONSTRAINT django_content_type_app_label_model_76bd3d3b_uniq UNIQUE (app_label, model), CONSTRAINT django_content_type_pkey PRIMARY KEY (id));
+
+
+-- public.django_migrations definition
+
+-- Drop table
+
+-- DROP TABLE public.django_migrations;
+
+CREATE TABLE public.django_migrations ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, app varchar(255) NOT NULL, "name" varchar(255) NOT NULL, applied timestamptz NOT NULL, CONSTRAINT django_migrations_pkey PRIMARY KEY (id));
+
+
+-- public.django_session definition
+
+-- Drop table
+
+-- DROP TABLE public.django_session;
+
+CREATE TABLE public.django_session ( session_key varchar(40) NOT NULL, session_data text NOT NULL, expire_date timestamptz NOT NULL, CONSTRAINT django_session_pkey PRIMARY KEY (session_key));
+CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING btree (expire_date);
+CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session USING btree (session_key varchar_pattern_ops);
+
+
+-- public.employee_attendances_2025 definition
+
+-- Drop table
+
+-- DROP TABLE public.employee_attendances_2025;
+
+CREATE TABLE public.employee_attendances_2025 ( id int8 NULL, "name" varchar(50) NULL, employee_id_id varchar(20) NULL, phone varchar(15) NULL, branch varchar(50) NULL, gps_in varchar(250) NULL, address_in varchar(250) NULL, date_in timestamptz NULL, clock_in varchar(50) NULL, gps_out varchar(250) NULL, address_out varchar(250) NULL, date_out timestamptz NULL, clock_out varchar(50) NULL, is_late bool NULL, is_early bool NULL, work_time1 varchar(50) NULL, tg_id_id varchar(25) NULL, employee_shift_id_id int8 NULL, absent_check_in varchar(50) NULL, early_mn varchar(50) NULL, late_mn varchar(50) NULL, normal_in varchar(50) NULL, normal_out varchar(50) NULL, off_duty1 varchar(50) NULL, off_duty2 varchar(50) NULL, on_duty1 varchar(50) NULL, on_duty2 varchar(50) NULL, work_time2 varchar(50) NULL, absent_check_out varchar(50) NULL, is_full_day bool NULL, shift_name varchar(50) NULL, shift_id int8 NULL);
+
+
+-- public.migration_backfill_markers definition
+
+-- Drop table
+
+-- DROP TABLE public.migration_backfill_markers;
+
+CREATE TABLE public.migration_backfill_markers ( id bigserial NOT NULL, migration_name varchar(200) NOT NULL, table_name varchar(100) NOT NULL, row_pk varchar(100) NOT NULL, "action" varchar(100) NOT NULL, old_values jsonb NULL, new_values jsonb NULL, created_at timestamptz DEFAULT now() NOT NULL, CONSTRAINT migration_backfill_markers_pkey PRIMARY KEY (id));
+
+
+-- public.user_group definition
+
+-- Drop table
+
+-- DROP TABLE public.user_group;
+
+CREATE TABLE public.user_group ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "level" int4 NOT NULL, slug varchar(200) NOT NULL, "name" varchar(200) NOT NULL, description text NOT NULL, controller_id int4 NOT NULL, active bool NOT NULL, CONSTRAINT user_group_pkey PRIMARY KEY (id));
+
+
+-- public.auth_permission definition
+
+-- Drop table
+
+-- DROP TABLE public.auth_permission;
+
+CREATE TABLE public.auth_permission ( id int4 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(255) NOT NULL, content_type_id int4 NOT NULL, codename varchar(100) NOT NULL, CONSTRAINT auth_permission_content_type_id_codename_01ab375a_uniq UNIQUE (content_type_id, codename), CONSTRAINT auth_permission_pkey PRIMARY KEY (id), CONSTRAINT auth_permission_content_type_id_2f476e4b_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission USING btree (content_type_id);
+
+
+-- public.bluetooths definition
+
+-- Drop table
+
+-- DROP TABLE public.bluetooths;
+
+CREATE TABLE public.bluetooths ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, device_name varchar(100) NOT NULL, "uuid" varchar(100) NOT NULL, branch_id int8 NULL, active bool NOT NULL, CONSTRAINT bluetooths_pkey PRIMARY KEY (id), CONSTRAINT bluetooths_uuid_e864b0df_uniq UNIQUE (uuid), CONSTRAINT bluetooths_branch_id_be63254f_fk_branchs_id FOREIGN KEY (branch_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX bluetooths_branch_id_be63254f ON public.bluetooths USING btree (branch_id);
+CREATE INDEX bluetooths_uuid_e864b0df_like ON public.bluetooths USING btree (uuid varchar_pattern_ops);
+
+
+-- public.company_branch_access definition
+
+-- Drop table
+
+-- DROP TABLE public.company_branch_access;
+
+CREATE TABLE public.company_branch_access ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, active bool NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, branch_id int8 NOT NULL, company_id int8 NOT NULL, CONSTRAINT company_branch_access_pkey PRIMARY KEY (id), CONSTRAINT unique_company_branch_access UNIQUE (company_id, branch_id), CONSTRAINT company_branch_access_branch_id_c8f7cc27_fk_branchs_id FOREIGN KEY (branch_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT company_branch_access_company_id_89401925_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX company_branch_access_branch_id_c8f7cc27 ON public.company_branch_access USING btree (branch_id);
+CREATE INDEX company_branch_access_company_id_89401925 ON public.company_branch_access USING btree (company_id);
+
+
+-- public.controllers definition
+
+-- Drop table
+
+-- DROP TABLE public.controllers;
+
+CREATE TABLE public.controllers ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(200) NOT NULL, description text NOT NULL, billing_tab varchar(200) NULL, access_description varchar(200) NOT NULL, access_type varchar(200) NOT NULL, active bool NOT NULL, category_id_id int8 NOT NULL, CONSTRAINT controllers_pkey PRIMARY KEY (id), CONSTRAINT controllers_category_id_id_d5faeb8f_fk_controllers_category_id FOREIGN KEY (category_id_id) REFERENCES public.controllers_category(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX controllers_category_id_id_d5faeb8f ON public.controllers USING btree (category_id_id);
+
+
+-- public.departments definition
+
+-- Drop table
+
+-- DROP TABLE public.departments;
+
+CREATE TABLE public.departments ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(200) NULL, description text NULL, active bool NOT NULL, company_id int8 NULL, CONSTRAINT departments_pkey PRIMARY KEY (id), CONSTRAINT departments_company_id_0d17e9ca_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX departments_company_id_0d17e9ca ON public.departments USING btree (company_id);
+
+
+-- public.leave_types definition
+
+-- Drop table
+
+-- DROP TABLE public.leave_types;
+
+CREATE TABLE public.leave_types ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(100) NOT NULL, is_paid bool NOT NULL, default_entitled_days numeric(6, 2) NOT NULL, description text NOT NULL, active bool NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, company_id int8 NOT NULL, CONSTRAINT leave_types_pkey PRIMARY KEY (id), CONSTRAINT unique_leave_type_name_per_company UNIQUE (company_id, name), CONSTRAINT leave_types_company_id_140c4144_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX leave_types_company_id_140c4144 ON public.leave_types USING btree (company_id);
+
+
+-- public.network_info definition
+
+-- Drop table
+
+-- DROP TABLE public.network_info;
+
+CREATE TABLE public.network_info ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, isp varchar(50) NOT NULL, ipv4 varchar(50) NOT NULL, gps varchar(100) NULL, branch_id int8 NULL, active bool NOT NULL, "name" varchar(255) NOT NULL, description varchar(255) NOT NULL, CONSTRAINT network_info_pkey PRIMARY KEY (id), CONSTRAINT network_info_branch_id_cbe48028_fk_branchs_id FOREIGN KEY (branch_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX network_info_branch_id_cbe48028 ON public.network_info USING btree (branch_id);
+CREATE INDEX network_info_ipv4_d8fddc1c_like ON public.network_info USING btree (ipv4 varchar_pattern_ops);
+
+
+-- public.positions definition
+
+-- Drop table
+
+-- DROP TABLE public.positions;
+
+CREATE TABLE public.positions ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(200) NOT NULL, description text NOT NULL, active bool NOT NULL, department_id_id int8 NULL, CONSTRAINT positions_pkey PRIMARY KEY (id), CONSTRAINT positions_department_id_id_1f3f04c0_fk_departments_id FOREIGN KEY (department_id_id) REFERENCES public.departments(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX positions_department_id_id_1f3f04c0 ON public.positions USING btree (department_id_id);
+
+
+-- public.public_holidays definition
+
+-- Drop table
+
+-- DROP TABLE public.public_holidays;
+
+CREATE TABLE public.public_holidays ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, holiday_date date NULL, holiday_name varchar(255) NOT NULL, description text NULL, active bool NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, holiday_day int2 NULL, holiday_month int2 NULL, company_id int8 NULL, CONSTRAINT public_holidays_holiday_date_key UNIQUE (holiday_date), CONSTRAINT public_holidays_holiday_day_check CHECK ((holiday_day >= 0)), CONSTRAINT public_holidays_holiday_month_check CHECK ((holiday_month >= 0)), CONSTRAINT public_holidays_pkey PRIMARY KEY (id), CONSTRAINT unique_public_holiday_per_company_day UNIQUE (company_id, holiday_month, holiday_day), CONSTRAINT public_holidays_company_id_e0ca9fe8_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX public_holi_active_032088_idx ON public.public_holidays USING btree (active);
+CREATE INDEX public_holi_company_397894_idx ON public.public_holidays USING btree (company_id);
+CREATE INDEX public_holi_holiday_1605f7_idx ON public.public_holidays USING btree (holiday_month, holiday_day);
+CREATE INDEX public_holidays_company_id_e0ca9fe8 ON public.public_holidays USING btree (company_id);
+
+
+-- public.qrcodes definition
+
+-- Drop table
+
+-- DROP TABLE public.qrcodes;
+
+CREATE TABLE public.qrcodes ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, hash varchar(250) NULL, gps varchar(100) NOT NULL, branch_id int8 NULL, qr_image varchar(100) NOT NULL, network_info_id int8 NULL, active bool NOT NULL, description varchar(255) NOT NULL, CONSTRAINT qrcodes_network_info_id_d90940df_uniq UNIQUE (network_info_id), CONSTRAINT qrcodes_pkey PRIMARY KEY (id), CONSTRAINT qrcodes_branch_id_d78127d9_fk_branchs_id FOREIGN KEY (branch_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT qrcodes_network_info_id_d90940df_fk_network_info_id FOREIGN KEY (network_info_id) REFERENCES public.network_info(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX qrcodes_branch_id_d78127d9 ON public.qrcodes USING btree (branch_id);
+
+
+-- public.shifts definition
+
+-- Drop table
+
+-- DROP TABLE public.shifts;
+
+CREATE TABLE public.shifts ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(50) NOT NULL, end_time2 time NULL, end_time1 time NULL, half_day time NULL, description text NULL, grace_check_in int4 NULL, early_check_out int4 NULL, is_full_day bool NULL, active bool NOT NULL, color_code varchar(50) NULL, start_time1 time NULL, start_time2 time NULL, total_hours float8 NULL, "type" varchar(50) NULL, day_off_weekday varchar(10) NULL, half_day_end_time time NULL, half_day_start_time time NULL, half_day_weekday varchar(10) NULL, created_at timestamptz NULL, end_next_day1 bool NOT NULL, end_next_day2 bool NOT NULL, is_day_off bool NOT NULL, shift_code varchar(20) NULL, text_color varchar(50) NULL, updated_at timestamptz NULL, internal_only bool NOT NULL, company_id int8 NULL, CONSTRAINT shifts_pkey PRIMARY KEY (id), CONSTRAINT unique_shift_name_per_company UNIQUE (company_id, name), CONSTRAINT shifts_company_id_b7636e3f_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX shifts_active_82fce4_idx ON public.shifts USING btree (active);
+CREATE INDEX shifts_company_3e8fb8_idx ON public.shifts USING btree (company_id);
+CREATE INDEX shifts_company_id_b7636e3f ON public.shifts USING btree (company_id);
+CREATE INDEX shifts_interna_91bbfb_idx ON public.shifts USING btree (internal_only);
+CREATE INDEX shifts_is_day__ba8443_idx ON public.shifts USING btree (is_day_off);
+CREATE INDEX shifts_shift_c_033db8_idx ON public.shifts USING btree (shift_code);
+CREATE UNIQUE INDEX unique_shift_code_per_company ON public.shifts USING btree (company_id, shift_code) WHERE (shift_code IS NOT NULL);
+
+
+-- public.teams definition
+
+-- Drop table
+
+-- DROP TABLE public.teams;
+
+CREATE TABLE public.teams ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(200) NOT NULL, description text NOT NULL, active bool NOT NULL, department_id_id int8 NULL, CONSTRAINT teams_pkey PRIMARY KEY (id), CONSTRAINT teams_department_id_id_4da65753_fk_departments_id FOREIGN KEY (department_id_id) REFERENCES public.departments(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX teams_department_id_id_4da65753 ON public.teams USING btree (department_id_id);
+
+
+-- public.auth_group_permissions definition
+
+-- Drop table
+
+-- DROP TABLE public.auth_group_permissions;
+
+CREATE TABLE public.auth_group_permissions ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, group_id int4 NOT NULL, permission_id int4 NOT NULL, CONSTRAINT auth_group_permissions_group_id_permission_id_0cd325b0_uniq UNIQUE (group_id, permission_id), CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id), CONSTRAINT auth_group_permissio_permission_id_84c5c92e_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permissions USING btree (group_id);
+CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_permissions USING btree (permission_id);
+
+
+-- public.employees definition
+
+-- Drop table
+
+-- DROP TABLE public.employees;
+
+CREATE TABLE public.employees ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, code varchar(20) NOT NULL, "name" varchar(200) NOT NULL, gender varchar(20) NOT NULL, phone varchar(15) NOT NULL, email varchar(320) NULL, home_no varchar(200) NULL, street varchar(200) NULL, village_id int4 NULL, commune_id int4 NULL, district_id int4 NULL, city_id int4 NULL, create_by varchar(200) NULL, create_date timestamptz NULL, sale_status varchar(200) NULL, active bool NOT NULL, branch_id_id int8 NOT NULL, department_id_id int8 NOT NULL, position_id_id int8 NOT NULL, profile varchar(100) NULL, team_id_id int8 NULL, is_manager bool NULL, manager_id int8 NULL, base_shift_template_id int8 NULL, company_id int8 NULL, CONSTRAINT employees_code_key UNIQUE (code), CONSTRAINT employees_pkey PRIMARY KEY (id), CONSTRAINT employees_base_shift_template_id_def55303_fk_shifts_id FOREIGN KEY (base_shift_template_id) REFERENCES public.shifts(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employees_branch_id_id_3bbc1cc7_fk_branchs_id FOREIGN KEY (branch_id_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employees_company_id_1ba761ad_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employees_department_id_id_b43bae15_fk_departments_id FOREIGN KEY (department_id_id) REFERENCES public.departments(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employees_manager_id_0674f795_fk_employees_id FOREIGN KEY (manager_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employees_position_id_id_5de5adf5_fk_positions_id FOREIGN KEY (position_id_id) REFERENCES public.positions(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employees_team_id_id_691a4eaf_fk_teams_id FOREIGN KEY (team_id_id) REFERENCES public.teams(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX employees_base_shift_template_id_def55303 ON public.employees USING btree (base_shift_template_id);
+CREATE INDEX employees_branch_id_id_3bbc1cc7 ON public.employees USING btree (branch_id_id);
+CREATE INDEX employees_code_c6e6e286_like ON public.employees USING btree (code varchar_pattern_ops);
+CREATE INDEX employees_company_id_1ba761ad ON public.employees USING btree (company_id);
+CREATE INDEX employees_departm_89ae7c_idx ON public.employees USING btree (department_id_id);
+CREATE INDEX employees_department_id_id_b43bae15 ON public.employees USING btree (department_id_id);
+CREATE INDEX employees_manager_id_0674f795 ON public.employees USING btree (manager_id);
+CREATE INDEX employees_positio_1c7b13_idx ON public.employees USING btree (position_id_id);
+CREATE INDEX employees_position_id_id_5de5adf5 ON public.employees USING btree (position_id_id);
+CREATE INDEX employees_team_id_id_691a4eaf ON public.employees USING btree (team_id_id);
+
+
+-- public.notifications definition
+
+-- Drop table
+
+-- DROP TABLE public.notifications;
+
+CREATE TABLE public.notifications ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, title varchar(100) NOT NULL, message varchar(250) NOT NULL, "token" varchar(500) NOT NULL, is_read bool NOT NULL, created_at timestamptz NOT NULL, employee_id_id varchar(20) NOT NULL, CONSTRAINT notifications_pkey PRIMARY KEY (id), CONSTRAINT notifications_employee_id_id_c268f974_fk FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX notifications_employee_id_id_c268f974 ON public.notifications USING btree (employee_id_id);
+CREATE INDEX notifications_employee_id_id_c268f974_like ON public.notifications USING btree (employee_id_id varchar_pattern_ops);
+
+
+-- public.sale_survey_users definition
+
+-- Drop table
+
+-- DROP TABLE public.sale_survey_users;
+
+CREATE TABLE public.sale_survey_users ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, tg_id int4 NOT NULL, first_name varchar(100) NULL, last_name varchar(100) NULL, phone varchar(15) NULL, created_at timestamptz NOT NULL, active bool NOT NULL, access_granted bool NOT NULL, user_type varchar(12) NOT NULL, state int4 NULL, employee_id_id varchar(20) NULL, CONSTRAINT sale_survey_users_pkey PRIMARY KEY (id), CONSTRAINT sale_survey_users_tg_id_key UNIQUE (tg_id), CONSTRAINT sale_survey_users_employee_id_id_7cf30c94_fk_employees_code FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX sale_survey_users_employee_id_id_7cf30c94 ON public.sale_survey_users USING btree (employee_id_id);
+CREATE INDEX sale_survey_users_employee_id_id_7cf30c94_like ON public.sale_survey_users USING btree (employee_id_id varchar_pattern_ops);
+
+
+-- public.sale_surveys definition
+
+-- Drop table
+
+-- DROP TABLE public.sale_surveys;
+
+CREATE TABLE public.sale_surveys ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, survey_id varchar(10) NOT NULL, customer_name varchar(200) NOT NULL, customer_contact varchar(20) NOT NULL, customer_address varchar(250) NOT NULL, customer_gps varchar(250) NOT NULL, customer_gps_type varchar(10) NOT NULL, created_at timestamptz NOT NULL, requested_at timestamptz NULL, requested_by int4 NULL, status varchar(20) NOT NULL, surveyed_at timestamptz NULL, surveyed_result varchar(200) NULL, message_id int4 NULL, surveyed_name varchar(100) NULL, created_by_id varchar(20) NULL, surveyed_by_id int4 NULL, CONSTRAINT sale_surveys_pkey PRIMARY KEY (id), CONSTRAINT sale_surveys_survey_id_key UNIQUE (survey_id), CONSTRAINT sale_surveys_created_by_id_f3ec388f_fk_employees_code FOREIGN KEY (created_by_id) REFERENCES public.employees(code) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT sale_surveys_surveyed_by_id_e79d6108_fk_sale_survey_users_tg_id FOREIGN KEY (surveyed_by_id) REFERENCES public.sale_survey_users(tg_id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX sale_surveys_created_by_id_f3ec388f ON public.sale_surveys USING btree (created_by_id);
+CREATE INDEX sale_surveys_created_by_id_f3ec388f_like ON public.sale_surveys USING btree (created_by_id varchar_pattern_ops);
+CREATE INDEX sale_surveys_survey_id_3cd28a03_like ON public.sale_surveys USING btree (survey_id varchar_pattern_ops);
+CREATE INDEX sale_surveys_surveyed_by_id_e79d6108 ON public.sale_surveys USING btree (surveyed_by_id);
+
+
+-- public.scanner_qr definition
+
+-- Drop table
+
+-- DROP TABLE public.scanner_qr;
+
+CREATE TABLE public.scanner_qr ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, tg_id varchar(25) NOT NULL, chat_id varchar(25) NULL, employee_id_id varchar(20) NULL, active bool NOT NULL, is_attendance_required bool NOT NULL, CONSTRAINT scanner_qr_pkey PRIMARY KEY (id), CONSTRAINT scanner_qr_tg_id_key UNIQUE (tg_id), CONSTRAINT scanner_qr_employee_id_id_fkey FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) ON DELETE CASCADE);
+CREATE INDEX scanner_qr_employee_id_id_71d0928c ON public.scanner_qr USING btree (employee_id_id);
+CREATE INDEX scanner_qr_employee_id_id_71d0928c_like ON public.scanner_qr USING btree (employee_id_id varchar_pattern_ops);
+CREATE INDEX scanner_qr_tg_id_38348ed0_like ON public.scanner_qr USING btree (tg_id varchar_pattern_ops);
+
+
+-- public.shift_plans definition
+
+-- Drop table
+
+-- DROP TABLE public.shift_plans;
+
+CREATE TABLE public.shift_plans ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, plan_name varchar(255) NOT NULL, start_date date NOT NULL, end_date date NOT NULL, status varchar(30) NOT NULL, note text NULL, created_by varchar(200) NULL, approved_by varchar(200) NULL, approved_at timestamptz NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, manager_id int8 NULL, CONSTRAINT shift_plans_date_check CHECK ((end_date >= start_date)), CONSTRAINT shift_plans_pkey PRIMARY KEY (id), CONSTRAINT shift_plans_manager_id_28b03453_fk_employees_id FOREIGN KEY (manager_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX shift_plans_manager_dec744_idx ON public.shift_plans USING btree (manager_id);
+CREATE INDEX shift_plans_manager_id_28b03453 ON public.shift_plans USING btree (manager_id);
+CREATE INDEX shift_plans_start_d_57a7f6_idx ON public.shift_plans USING btree (start_date, end_date);
+CREATE INDEX shift_plans_status_d32782_idx ON public.shift_plans USING btree (status);
+
+
+-- public.tokens definition
+
+-- Drop table
+
+-- DROP TABLE public.tokens;
+
+CREATE TABLE public.tokens ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "token" varchar(500) NOT NULL, created_at timestamptz NOT NULL, employee_id_id varchar(20) NOT NULL, CONSTRAINT tokens_pkey PRIMARY KEY (id), CONSTRAINT tokens_employee_id_id_d4fc8b14_fk FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX tokens_employee_id_id_d4fc8b14 ON public.tokens USING btree (employee_id_id);
+CREATE INDEX tokens_employee_id_id_d4fc8b14_like ON public.tokens USING btree (employee_id_id varchar_pattern_ops);
+
+
+-- public.users definition
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, last_login timestamptz NULL, is_superuser bool NOT NULL, group_id int4 NOT NULL, user_type varchar(200) NULL, join_date timestamptz NULL, last_visit varchar(200) NULL, username varchar(200) NOT NULL, phone varchar(15) NOT NULL, pin_code int4 NULL, screen_name varchar(200) NULL, "password" varchar(200) NOT NULL, email varchar(320) NOT NULL, profile varchar(100) NULL, salt varchar(200) NULL, encode varchar(200) NULL, create_by varchar(200) NULL, create_date timestamptz NULL, reset_token varchar(200) NULL, reset_date timestamptz NULL, is_active bool NULL, "action" bool NOT NULL, is_staff bool NOT NULL, employee_id_id varchar(20) NOT NULL, temporary_password varchar(128) NULL, CONSTRAINT users_email_key UNIQUE (email), CONSTRAINT users_employee_id_id_ca59b943_uniq UNIQUE (employee_id_id), CONSTRAINT users_phone_key UNIQUE (phone), CONSTRAINT users_pkey PRIMARY KEY (id), CONSTRAINT users_username_key UNIQUE (username), CONSTRAINT users_employee_id_id_fkey FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) ON UPDATE CASCADE);
+CREATE INDEX users_email_0ea73cca_like ON public.users USING btree (email varchar_pattern_ops);
+CREATE INDEX users_employee_id_id_ca59b943_like ON public.users USING btree (employee_id_id varchar_pattern_ops);
+CREATE INDEX users_phone_2b77170a_like ON public.users USING btree (phone varchar_pattern_ops);
+CREATE INDEX users_username_e8658fc8_like ON public.users USING btree (username varchar_pattern_ops);
+
+
+-- public.users_groups definition
+
+-- Drop table
+
+-- DROP TABLE public.users_groups;
+
+CREATE TABLE public.users_groups ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, usersmodel_id int8 NOT NULL, group_id int4 NOT NULL, CONSTRAINT users_groups_pkey PRIMARY KEY (id), CONSTRAINT users_groups_usersmodel_id_group_id_2e5497a6_uniq UNIQUE (usersmodel_id, group_id), CONSTRAINT users_groups_group_id_2f3517aa_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT users_groups_usersmodel_id_dde28fa2_fk_users_id FOREIGN KEY (usersmodel_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX users_groups_group_id_2f3517aa ON public.users_groups USING btree (group_id);
+CREATE INDEX users_groups_usersmodel_id_dde28fa2 ON public.users_groups USING btree (usersmodel_id);
+
+
+-- public.users_user_permissions definition
+
+-- Drop table
+
+-- DROP TABLE public.users_user_permissions;
+
+CREATE TABLE public.users_user_permissions ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, usersmodel_id int8 NOT NULL, permission_id int4 NOT NULL, CONSTRAINT users_user_permissions_pkey PRIMARY KEY (id), CONSTRAINT users_user_permissions_usersmodel_id_permission_7b8a250b_uniq UNIQUE (usersmodel_id, permission_id), CONSTRAINT users_user_permissio_permission_id_6d08dcd2_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT users_user_permissions_usersmodel_id_667961cd_fk_users_id FOREIGN KEY (usersmodel_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX users_user_permissions_permission_id_6d08dcd2 ON public.users_user_permissions USING btree (permission_id);
+CREATE INDEX users_user_permissions_usersmodel_id_667961cd ON public.users_user_permissions USING btree (usersmodel_id);
+
+
+-- public.activity_log definition
+
+-- Drop table
+
+-- DROP TABLE public.activity_log;
+
+CREATE TABLE public.activity_log ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, phone varchar(25) NULL, "name" varchar(50) NULL, "path" varchar(255) NULL, "method" varchar(10) NULL, ip_address inet NULL, "timestamp" timestamptz NULL, action_description varchar(500) NULL, user_id int8 NULL, CONSTRAINT activity_log_pkey PRIMARY KEY (id), CONSTRAINT activity_log_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.users(id) ON UPDATE CASCADE);
+CREATE INDEX activity_log_user_id_f1e09264 ON public.activity_log USING btree (user_id);
+
+
+-- public.attendances definition
+
+-- Drop table
+
+-- DROP TABLE public.attendances;
+
+CREATE TABLE public.attendances ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(50) NOT NULL, employee_id varchar(25) NOT NULL, phone varchar(15) NOT NULL, branch varchar(50) NOT NULL, gps_in varchar(250) NULL, address_in varchar(250) NULL, date_in timestamptz NULL, clock_in varchar(50) NULL, gps_out varchar(250) NULL, address_out varchar(250) NULL, date_out timestamptz NULL, clock_out varchar(50) NULL, tg_id_id varchar(25) NULL, CONSTRAINT attendances_pkey PRIMARY KEY (id), CONSTRAINT attendances_tg_id_id_a2d288b3_fk_scanner_qr_tg_id FOREIGN KEY (tg_id_id) REFERENCES public.scanner_qr(tg_id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX attendances_tg_id_id_a2d288b3 ON public.attendances USING btree (tg_id_id);
+CREATE INDEX attendances_tg_id_id_a2d288b3_like ON public.attendances USING btree (tg_id_id varchar_pattern_ops);
+
+
+-- public.attendances_report definition
+
+-- Drop table
+
+-- DROP TABLE public.attendances_report;
+
+CREATE TABLE public.attendances_report ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(50) NOT NULL, phone varchar(15) NOT NULL, branch varchar(50) NOT NULL, gps_in varchar(250) NULL, address_in varchar(250) NULL, date_in timestamptz NULL, clock_in varchar(50) NULL, gps_out varchar(250) NULL, address_out varchar(250) NULL, date_out timestamptz NULL, clock_out varchar(50) NULL, is_late bool NOT NULL, is_early bool NOT NULL, work_time1 varchar(50) NULL, work_time2 varchar(50) NULL, on_duty1 varchar(50) NULL, off_duty1 varchar(50) NULL, on_duty2 varchar(50) NULL, off_duty2 varchar(50) NULL, absent_check_in varchar(50) NULL, absent_check_out varchar(50) NULL, late_mn varchar(50) NULL, early_mn varchar(50) NULL, normal_in varchar(50) NULL, normal_out varchar(50) NULL, is_full_day bool NULL, shift_name varchar(50) NULL, employee_id_id varchar(20) NULL, shift_id int8 NULL, tg_id_id int8 NULL, CONSTRAINT attendances_report_pkey PRIMARY KEY (id), CONSTRAINT attendances_report_employee_id_fk FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) ON DELETE CASCADE, CONSTRAINT attendances_report_shift_id_fk FOREIGN KEY (shift_id) REFERENCES public.shifts(id) ON DELETE SET NULL, CONSTRAINT attendances_report_tg_id_fk FOREIGN KEY (tg_id_id) REFERENCES public.scanner_qr(id) ON DELETE SET NULL);
+CREATE INDEX attendances_report_employee_id_id_428a145f ON public.attendances_report USING btree (employee_id_id);
+CREATE INDEX attendances_report_employee_id_id_428a145f_like ON public.attendances_report USING btree (employee_id_id varchar_pattern_ops);
+CREATE INDEX attendances_report_shift_id_8b3e294f ON public.attendances_report USING btree (shift_id);
+CREATE INDEX attendances_report_tg_id_id_281493f7 ON public.attendances_report USING btree (tg_id_id);
+
+
+-- public.authtoken_token definition
+
+-- Drop table
+
+-- DROP TABLE public.authtoken_token;
+
+CREATE TABLE public.authtoken_token ( "key" varchar(40) NOT NULL, created timestamptz NOT NULL, user_id int8 NOT NULL, CONSTRAINT authtoken_token_pkey PRIMARY KEY (key), CONSTRAINT authtoken_token_user_id_key UNIQUE (user_id), CONSTRAINT authtoken_token_user_id_35299eff_fk_users_id FOREIGN KEY (user_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX authtoken_token_key_10f0b77e_like ON public.authtoken_token USING btree (key varchar_pattern_ops);
+
+
+-- public.branchs_permission definition
+
+-- Drop table
+
+-- DROP TABLE public.branchs_permission;
+
+CREATE TABLE public.branchs_permission ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, user_id_id int8 NOT NULL, CONSTRAINT branchs_permission_pkey PRIMARY KEY (id), CONSTRAINT branchs_permission_user_id_id_9197d6c6_fk_users_id FOREIGN KEY (user_id_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX branchs_permission_user_id_id_9197d6c6 ON public.branchs_permission USING btree (user_id_id);
+
+
+-- public.branchs_permission_branch_id definition
+
+-- Drop table
+
+-- DROP TABLE public.branchs_permission_branch_id;
+
+CREATE TABLE public.branchs_permission_branch_id ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, branchpermission_id int8 NOT NULL, branchs_id int8 NOT NULL, CONSTRAINT branchs_permission_branc_branchpermission_id_bran_0580d1e4_uniq UNIQUE (branchpermission_id, branchs_id), CONSTRAINT branchs_permission_branch_id_pkey PRIMARY KEY (id), CONSTRAINT branchs_permission_b_branchpermission_id_c78c7f03_fk_branchs_p FOREIGN KEY (branchpermission_id) REFERENCES public.branchs_permission(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT branchs_permission_branch_id_branchs_id_ba5c1d4d_fk_branchs_id FOREIGN KEY (branchs_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX branchs_permission_branch_id_branchpermission_id_c78c7f03 ON public.branchs_permission_branch_id USING btree (branchpermission_id);
+CREATE INDEX branchs_permission_branch_id_branchs_id_ba5c1d4d ON public.branchs_permission_branch_id USING btree (branchs_id);
+
+
+-- public.controllers_permission definition
+
+-- Drop table
+
+-- DROP TABLE public.controllers_permission;
+
+CREATE TABLE public.controllers_permission ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, user_id_id int8 NOT NULL, controller_id_id int8 NOT NULL, CONSTRAINT controllers_permission_pkey PRIMARY KEY (id), CONSTRAINT controllers_permissi_controller_id_id_cf1f2f74_fk_controlle FOREIGN KEY (controller_id_id) REFERENCES public.controllers(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT controllers_permission_user_id_id_a232390a_fk_users_id FOREIGN KEY (user_id_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX controllers_permission_controller_id_id_cf1f2f74 ON public.controllers_permission USING btree (controller_id_id);
+CREATE INDEX controllers_permission_user_id_id_a232390a ON public.controllers_permission USING btree (user_id_id);
+
+
+-- public.django_admin_log definition
+
+-- Drop table
+
+-- DROP TABLE public.django_admin_log;
+
+CREATE TABLE public.django_admin_log ( id int4 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 CACHE 1 NO CYCLE) NOT NULL, action_time timestamptz NOT NULL, object_id text NULL, object_repr varchar(200) NOT NULL, action_flag int2 NOT NULL, change_message text NOT NULL, content_type_id int4 NULL, user_id int8 NOT NULL, CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0)), CONSTRAINT django_admin_log_pkey PRIMARY KEY (id), CONSTRAINT django_admin_log_content_type_id_c4bce8eb_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT django_admin_log_user_id_c564eba6_fk_users_id FOREIGN KEY (user_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_log USING btree (content_type_id);
+CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING btree (user_id);
+
+
+-- public.employee_mission_branches definition
+
+-- Drop table
+
+-- DROP TABLE public.employee_mission_branches;
+
+CREATE TABLE public.employee_mission_branches ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, active bool NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, branch_id int8 NOT NULL, employee_id int8 NOT NULL, CONSTRAINT employee_mission_branches_pkey PRIMARY KEY (id), CONSTRAINT unique_employee_mission_branch UNIQUE (employee_id, branch_id), CONSTRAINT employee_mission_branches_branch_id_1f1a763b_fk_branchs_id FOREIGN KEY (branch_id) REFERENCES public.branchs(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employee_mission_branches_employee_id_75598832_fk_employees_id FOREIGN KEY (employee_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX employee_mission_branches_branch_id_1f1a763b ON public.employee_mission_branches USING btree (branch_id);
+CREATE INDEX employee_mission_branches_employee_id_75598832 ON public.employee_mission_branches USING btree (employee_id);
+
+
+-- public.employee_shifts definition
+
+-- Drop table
+
+-- DROP TABLE public.employee_shifts;
+
+CREATE TABLE public.employee_shifts ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "date" date NOT NULL, active bool NOT NULL, employee_id int8 NOT NULL, shift_id int8 NOT NULL, CONSTRAINT employee_shifts_pkey PRIMARY KEY (id), CONSTRAINT unique_employee_shift_per_day UNIQUE (employee_id, date), CONSTRAINT employee_shifts_employee_id_a3eb0952_fk_employees_id FOREIGN KEY (employee_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employee_shifts_shift_id_c2ebdaee_fk_shifts_id FOREIGN KEY (shift_id) REFERENCES public.shifts(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX employee_shifts_employee_id_a3eb0952 ON public.employee_shifts USING btree (employee_id);
+CREATE INDEX employee_shifts_shift_id_c2ebdaee ON public.employee_shifts USING btree (shift_id);
+
+
+-- public.leave_balances definition
+
+-- Drop table
+
+-- DROP TABLE public.leave_balances;
+
+CREATE TABLE public.leave_balances ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "year" int4 NOT NULL, entitled_days numeric(6, 2) NOT NULL, used_days numeric(6, 2) NOT NULL, remaining_days numeric(6, 2) NOT NULL, note text NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, company_id int8 NOT NULL, employee_id int8 NOT NULL, leave_type_id int8 NOT NULL, updated_by_id int8 NULL, CONSTRAINT leave_balances_pkey PRIMARY KEY (id), CONSTRAINT leave_balances_year_check CHECK ((year >= 0)), CONSTRAINT unique_leave_balance_per_employee_type_year UNIQUE (company_id, employee_id, leave_type_id, year), CONSTRAINT leave_balances_company_id_aae5317b_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_balances_employee_id_2a79139f_fk_employees_id FOREIGN KEY (employee_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_balances_leave_type_id_a8915386_fk_leave_types_id FOREIGN KEY (leave_type_id) REFERENCES public.leave_types(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_balances_updated_by_id_0322376b_fk_users_id FOREIGN KEY (updated_by_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX leave_balan_company_619a8a_idx ON public.leave_balances USING btree (company_id, employee_id, year);
+CREATE INDEX leave_balan_company_ddb939_idx ON public.leave_balances USING btree (company_id, leave_type_id, year);
+CREATE INDEX leave_balances_company_id_aae5317b ON public.leave_balances USING btree (company_id);
+CREATE INDEX leave_balances_employee_id_2a79139f ON public.leave_balances USING btree (employee_id);
+CREATE INDEX leave_balances_leave_type_id_a8915386 ON public.leave_balances USING btree (leave_type_id);
+CREATE INDEX leave_balances_updated_by_id_0322376b ON public.leave_balances USING btree (updated_by_id);
+CREATE INDEX leave_balances_year_d01131c1 ON public.leave_balances USING btree (year);
+
+
+-- public.leave_records definition
+
+-- Drop table
+
+-- DROP TABLE public.leave_records;
+
+CREATE TABLE public.leave_records ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, start_date date NOT NULL, end_date date NOT NULL, duration numeric(6, 2) NOT NULL, reason text NOT NULL, note text NOT NULL, status varchar(20) NOT NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, company_id int8 NOT NULL, created_by_id int8 NULL, employee_id int8 NOT NULL, leave_type_id int8 NOT NULL, updated_by_id int8 NULL, half_day_period varchar(2) NULL, is_half_day bool NOT NULL, CONSTRAINT leave_records_pkey PRIMARY KEY (id), CONSTRAINT leave_records_company_id_71cd5c7b_fk_companies_id FOREIGN KEY (company_id) REFERENCES public.companies(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_records_created_by_id_b7bf1b96_fk_users_id FOREIGN KEY (created_by_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_records_employee_id_98c809f8_fk_employees_id FOREIGN KEY (employee_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_records_leave_type_id_eb21ea89_fk_leave_types_id FOREIGN KEY (leave_type_id) REFERENCES public.leave_types(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT leave_records_updated_by_id_aa59f87a_fk_users_id FOREIGN KEY (updated_by_id) REFERENCES public.users(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX leave_recor_company_ac7a05_idx ON public.leave_records USING btree (company_id, leave_type_id, start_date);
+CREATE INDEX leave_recor_company_b9a221_idx ON public.leave_records USING btree (company_id, status);
+CREATE INDEX leave_recor_company_f6dd67_idx ON public.leave_records USING btree (company_id, employee_id, start_date);
+CREATE INDEX leave_records_company_id_71cd5c7b ON public.leave_records USING btree (company_id);
+CREATE INDEX leave_records_created_by_id_b7bf1b96 ON public.leave_records USING btree (created_by_id);
+CREATE INDEX leave_records_employee_id_98c809f8 ON public.leave_records USING btree (employee_id);
+CREATE INDEX leave_records_end_date_c489dbf3 ON public.leave_records USING btree (end_date);
+CREATE INDEX leave_records_leave_type_id_eb21ea89 ON public.leave_records USING btree (leave_type_id);
+CREATE INDEX leave_records_start_date_db2fc496 ON public.leave_records USING btree (start_date);
+CREATE INDEX leave_records_status_a823d5d0 ON public.leave_records USING btree (status);
+CREATE INDEX leave_records_status_a823d5d0_like ON public.leave_records USING btree (status varchar_pattern_ops);
+CREATE INDEX leave_records_updated_by_id_aa59f87a ON public.leave_records USING btree (updated_by_id);
+
+
+-- public.shift_plan_assignments definition
+
+-- Drop table
+
+-- DROP TABLE public.shift_plan_assignments;
+
+CREATE TABLE public.shift_plan_assignments ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, assignment_start_date date NULL, assignment_end_date date NULL, work_type varchar(30) NOT NULL, day_status varchar(30) NOT NULL, note varchar(255) NULL, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, employee_id int8 NOT NULL, public_holiday_id int8 NULL, shift_plan_id int8 NULL, shift_template_id int8 NULL, CONSTRAINT assignment_period_date_check CHECK ((((assignment_end_date IS NULL) AND (assignment_start_date IS NULL)) OR (assignment_end_date >= assignment_start_date))), CONSTRAINT assignment_period_dates_together CHECK ((((assignment_end_date IS NULL) AND (assignment_start_date IS NULL)) OR ((assignment_end_date IS NOT NULL) AND (assignment_start_date IS NOT NULL)))), CONSTRAINT fixed_assignment_period_dates_null CHECK ((((assignment_end_date IS NULL) AND (assignment_start_date IS NULL) AND ((work_type)::text = 'fixed'::text)) OR ((work_type)::text = 'flexible'::text))), CONSTRAINT holiday_only_for_fixed_work_type CHECK (((((day_status)::text = 'holiday'::text) AND ((work_type)::text = 'fixed'::text)) OR (NOT ((day_status)::text = 'holiday'::text)))), CONSTRAINT shift_plan_assignments_pkey PRIMARY KEY (id), CONSTRAINT shift_plan_assignmen_public_holiday_id_d1bdf623_fk_public_ho FOREIGN KEY (public_holiday_id) REFERENCES public.public_holidays(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT shift_plan_assignments_employee_id_9c761bfc_fk_employees_id FOREIGN KEY (employee_id) REFERENCES public.employees(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT shift_plan_assignments_shift_plan_id_6f944fbe_fk_shift_plans_id FOREIGN KEY (shift_plan_id) REFERENCES public.shift_plans(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT shift_plan_assignments_shift_template_id_1470d1d7_fk_shifts_id FOREIGN KEY (shift_template_id) REFERENCES public.shifts(id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX shift_plan__assignm_eb79e8_idx ON public.shift_plan_assignments USING btree (assignment_start_date, assignment_end_date);
+CREATE INDEX shift_plan__employe_c0c10e_idx ON public.shift_plan_assignments USING btree (employee_id);
+CREATE INDEX shift_plan__public__d505ad_idx ON public.shift_plan_assignments USING btree (public_holiday_id);
+CREATE INDEX shift_plan__shift_p_08072d_idx ON public.shift_plan_assignments USING btree (shift_plan_id);
+CREATE INDEX shift_plan__shift_t_2f9936_idx ON public.shift_plan_assignments USING btree (shift_template_id);
+CREATE INDEX shift_plan__work_ty_38b0b5_idx ON public.shift_plan_assignments USING btree (work_type, day_status);
+CREATE INDEX shift_plan_assignments_employee_id_9c761bfc ON public.shift_plan_assignments USING btree (employee_id);
+CREATE INDEX shift_plan_assignments_public_holiday_id_d1bdf623 ON public.shift_plan_assignments USING btree (public_holiday_id);
+CREATE INDEX shift_plan_assignments_shift_plan_id_6f944fbe ON public.shift_plan_assignments USING btree (shift_plan_id);
+CREATE INDEX shift_plan_assignments_shift_template_id_1470d1d7 ON public.shift_plan_assignments USING btree (shift_template_id);
+CREATE UNIQUE INDEX unique_fixed_employee_shift_plan ON public.shift_plan_assignments USING btree (shift_plan_id, employee_id) WHERE ((work_type)::text = 'fixed'::text);
+CREATE UNIQUE INDEX unique_flexible_employee_shift_period ON public.shift_plan_assignments USING btree (shift_plan_id, employee_id, assignment_start_date, assignment_end_date) WHERE ((work_type)::text = 'flexible'::text);
+
+
+-- public.employee_attendances definition
+
+-- Drop table
+
+-- DROP TABLE public.employee_attendances;
+
+CREATE TABLE public.employee_attendances ( id int8 GENERATED BY DEFAULT AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1 NO CYCLE) NOT NULL, "name" varchar(50) NOT NULL, employee_id_id varchar(20) NULL, phone varchar(15) NOT NULL, branch varchar(50) NOT NULL, gps_in varchar(250) NULL, address_in varchar(250) NULL, date_in timestamptz NULL, clock_in varchar(50) NULL, gps_out varchar(250) NULL, address_out varchar(250) NULL, date_out timestamptz NULL, clock_out varchar(50) NULL, is_late bool NOT NULL, is_early bool NOT NULL, work_time1 varchar(50) NULL, tg_id_id varchar(25) NULL, employee_shift_id_id int8 NULL, absent_check_in varchar(50) NULL, early_mn varchar(50) NULL, late_mn varchar(50) NULL, normal_in varchar(50) NULL, normal_out varchar(50) NULL, off_duty1 varchar(50) NULL, off_duty2 varchar(50) NULL, on_duty1 varchar(50) NULL, on_duty2 varchar(50) NULL, work_time2 varchar(50) NULL, absent_check_out varchar(50) NULL, is_full_day bool NULL, shift_name varchar(50) NULL, shift_id int8 NULL, note text NULL, status varchar(30) NOT NULL, half_day_leave_period varchar(2) NULL, leave_record_id int8 NULL, CONSTRAINT employee_attendances_pkey PRIMARY KEY (id), CONSTRAINT employee_attendances_employee_id_id_fkey FOREIGN KEY (employee_id_id) REFERENCES public.employees(code) ON UPDATE CASCADE, CONSTRAINT employee_attendances_employee_shift_id_id_3662cf26_fk_employee_ FOREIGN KEY (employee_shift_id_id) REFERENCES public.employee_shifts(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employee_attendances_leave_record_id_f86a8562_fk_leave_rec FOREIGN KEY (leave_record_id) REFERENCES public.leave_records(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employee_attendances_shift_id_882dbd0e_fk_shifts_id FOREIGN KEY (shift_id) REFERENCES public.shifts(id) DEFERRABLE INITIALLY DEFERRED, CONSTRAINT employee_attendances_tg_id_id_1830f668_fk_scanner_qr_tg_id FOREIGN KEY (tg_id_id) REFERENCES public.scanner_qr(tg_id) DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX employee_attendances_employee_id_id_843f0303 ON public.employee_attendances USING btree (employee_id_id);
+CREATE INDEX employee_attendances_employee_id_id_843f0303_like ON public.employee_attendances USING btree (employee_id_id varchar_pattern_ops);
+CREATE INDEX employee_attendances_employee_shift_id_id_3662cf26 ON public.employee_attendances USING btree (employee_shift_id_id);
+CREATE INDEX employee_attendances_half_day_leave_period_8d2dc440 ON public.employee_attendances USING btree (half_day_leave_period);
+CREATE INDEX employee_attendances_half_day_leave_period_8d2dc440_like ON public.employee_attendances USING btree (half_day_leave_period varchar_pattern_ops);
+CREATE INDEX employee_attendances_leave_record_id_f86a8562 ON public.employee_attendances USING btree (leave_record_id);
+CREATE INDEX employee_attendances_shift_id_882dbd0e ON public.employee_attendances USING btree (shift_id);
+CREATE INDEX employee_attendances_status_803e2bab ON public.employee_attendances USING btree (status);
+CREATE INDEX employee_attendances_status_803e2bab_like ON public.employee_attendances USING btree (status varchar_pattern_ops);
+CREATE INDEX employee_attendances_tg_id_id_1830f668 ON public.employee_attendances USING btree (tg_id_id);
+CREATE INDEX employee_attendances_tg_id_id_1830f668_like ON public.employee_attendances USING btree (tg_id_id varchar_pattern_ops);

@@ -1,0 +1,1 @@
+git commit -m "doc : erd diagram break into three part is organizatiosn data, attendance core part,,shift, system configure"

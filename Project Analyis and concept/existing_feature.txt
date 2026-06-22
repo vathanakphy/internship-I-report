@@ -1,0 +1,51 @@
+4. Project Analysis and Concept
+The Attendance System is an internal web-based application used by the Human Resource Department to manage employee attendance, shift schedules, leave records, and attendance reporting. During the internship period, the system was already operational and actively used within the organization. Therefore, the project focused on analyzing existing business requirements, improving system performance, enhancing existing functionalities, and developing additional features based on user requests.
+
+This chapter presents the analysis of the main functionalities of the Attendance System. The analysis was conducted based on the identified problems, project objectives, and operational requirements collected from Human Resource staff, managers, and system administrators. Each functionality is examined to understand its purpose, business process, user roles, and business rules within the system.
+4.1 Existing System Analyis
+The project had already been operate within an origation nearly 2 year before turn into my and . the current core fucntionaitln is cover most of the requemmtn of attendance system. those feature is include the first one is User management ; this is the control all the user in the system which the account of user that can login to use the system in provide two main poritn is add an admin user from the employee list and assign the permission . this is the company project so permission is very imporrnt not every can do everyghing but they can only do the oerpiton under thire permsiion . for instance IT can only view the record in that system whiel HR they can only add , edit, view only whiel the CTO as a super user tehy can do everything. they is the criticle part while it manage the admin user of the system.
+
+Antoehr module is Present Moduel that it handle general information about company kidn like staff information ; branch; team ; and possiotn; department ; this fution is to createa an an fully data of employee and structure of the organization.
+
+ Adttendacne module this is the main part of that project while that include Attendance user is create from employee when we nee dthrie attndnace and allow them to scan from thrie telegram we need to configure that emp with thire telegram caht id and then the staf they can login into the mini app and perform attendnca checking  ;network congiure which it we need withlist the network can scan the attendance ; this is the securituy part t prevent staff to check attenanc efrom the outside of the builinf. antoher ingin is QR si the main business of that project . in qr part is belong to the branch and banch include the network. in qr we iicnoude hash is the unique data of that qr and also GPS location to make sure that the staff is check in incide the application ; antohe part is shift it just the basic one that we configure working hour for the staff while the stard one is 8-5 working hour ; that is mattern in report section ; the report section is an important part whiel this is the most opreiton per day weel and month; that record all teh staf that check an attendance ; and then attendnc rule in that report is jsut trkain checkin and checkin out normal and can habdle basic absent as well btu not fully meet the reqyimetn. 
+
+those feature is call the backoffice or amdin panel tha perform opreiton related to attendance .
+
+Telegram bot & mini app ; while is is the mini app qr sttancne system so the staff they need a telgram bot to trakcing thire attneanc eand use it for chekcing ; that simple while it use with the main messge system in cambodia and more user friendly. the bot is use to luch the mini app that staff can lcick in the bot button and then they opreion attencne check in and checkcout with provide the thire record as well so it very conveing to decus when attendacne have issus.
+
+those are the exting core feature of that appliaciton 
+
+
+--------------------------------
+# 4. PROJECT ANALYSIS AND CONCEPTS
+
+The Attendance System is an internal web-based application used by the Human Resource Department to manage employee attendance, shift schedules, leave records, and attendance reporting. During the internship period, the system was already operational and actively used within the organization. Therefore, the project focused on analyzing existing business requirements, improving system performance, enhancing existing functionalities, and developing additional features based on user requests.
+
+This chapter presents the analysis of the main functionalities of the Attendance System. The analysis was conducted based on the identified problems, project objectives, and operational requirements collected from Human Resource staff, managers, and system administrators. Each functionality is examined to understand its purpose, business process, user roles, and business rules within the system.
+
+## 4.1 Existing System Analysis
+
+Before the internship period, the Attendance System had already been developed and used by the organization for nearly two years. The system provided several core functionalities required for daily attendance management. These functionalities served as the foundation for further enhancements and optimizations implemented during the internship.
+
+User Management
+The User Management module is responsible for managing user accounts and access permissions within the Back Office system. Administrative users are created from employee records and assigned permissions according to their responsibilities. Since the system is used across multiple departments, permission control is important to ensure that users can only access authorized functions. For example, Human Resource staff can manage attendance-related information, while other departments may only have view permissions. The superuser has full access to all system functions.
+
+Present Management
+The Present Management module manages organizational information including employees, branches, departments, teams, and positions. This module serves as the foundation of the system because attendance records, reporting, and other functionalities depend on accurate employee and organizational data.
+
+Attendance Management
+The Attendance Management module is the core component of the system. Employees who require attendance tracking are registered as attendance users and linked to their Telegram accounts. Through the Telegram Mini App, employees can perform attendance check-in and check-out operations. The system also supports network validation to ensure that attendance can only be recorded from approved company networks, helping prevent unauthorized attendance submissions from outside the workplace.
+
+QR Attendance Management
+The QR Attendance module provides QR codes that are assigned to specific branches. Each QR code contains unique identification information and location-related data used during attendance validation. Employees scan the QR code through the Telegram Mini App to record attendance, while the system verifies the attendance request according to the configured branch and validation rules.
+
+Shift Management.
+The existing Shift Management module provides basic working schedule configuration for employees. It allows administrators to define standard working hours that are later used during attendance calculation and reporting processes. Shift information plays an important role in determining attendance status and working time records.
+
+Attendance Reporting.
+The Attendance Reporting module is one of the most frequently used functionalities within the system. It provides daily, weekly, and monthly attendance information for Human Resource staff. The module records employee check-in and check-out activities and supports basic attendance status calculations. However, several limitations were identified during the analysis phase, particularly regarding reporting performance, filtering capabilities, and advanced attendance status management.
+
+Telegram Bot and Mini App.
+The Attendance System integrates with Telegram through a Telegram Bot and Telegram Mini App. Employees use the Telegram Bot to access the Mini App, which provides attendance check-in, attendance check-out, and attendance record viewing functionalities. This approach offers a convenient and user-friendly attendance experience because Telegram is widely used by employees and does not require the installation of an additional mobile application.
+
+Overall, the existing system successfully supported the organization's daily attendance operations. However, several opportunities for improvement were identified, including system performance optimization, attendance report enhancement, shift management improvement, leave management enhancement, attendance automation, and access control refinement. These areas became the primary focus of the enhancement work conducted during the internship period.

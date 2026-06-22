@@ -1,0 +1,99 @@
+5.Detial concept 
+THis chapter will describe about the web development concpt andnlsysi that be used to build a fullfuncaitonality attendance system. those concept is very used which it provide the fundermantal knowlgenge to be ready to code; which onldye the design pattern , analysis database and softwawre developemtn analysis concept.
+5.1 Technology Stack
+This system build using the technoly that support rapid reverlopmetn , fast , realiable and less manul work while we using web framework to bild the attendance system;
+1. Django 
+Django is higth lvel python web framework that provide fast development , built in feature , clean code and structure pattern; it follw M-V-T archtectecue pattern whiel it smmilar to MVC the most popular design pattern in web development as well. write more explain on MVT, provide by dejango; and also Django restframwork which it use to comuniaont with the mini app via api; single point deploumetn backend; and why we chsot this jango (with proper reference)
+2. Postfress database;
+writ for me with proper refercne 
+Docker container 
+explain on docekr why used it and referecen to official site
+3. Nginx (Web Server and Reverse Proxy)
+Explain aht is nginx take it from the original site; and in pre prod environment while port is restrict to expose so i use nginx to rever proxy from domain to the real port in the server; exlain moer on that
+4. Linux - Debain 
+explain it for pre prod and prod 
+
+V. DETAIL CONCEPT
+This chapter describes the web development concepts and technical analysis used to build the fully functional attendance system. This section acts as a bridge between the system requirements and the actual coding phase. It provides the fundamental knowledge required before implementation, covering the technology stack, system design patterns, and software architecture.
+5.1 Technology Stack
+The system is built using a modern technology stack that supports rapid development, fast performance, reliability, and automated deployments. By choosing the right tools, we reduce manual coding efforts, ensure a secure architecture, and make the system easier to maintain in the future. Below are the details of the core technologies used in this project.
+
+1. Django and Django REST Framework
+Django is a high-level Python web framework that encourages rapid development and clean code structure. It comes with many built-in features, such as a ready-to-use administrative interface and a secure authentication system, which significantly speeds up the development process.
+
+MVT Architecture: Django follows the Model-View-Template (MVT) design pattern, which separates the data, logic, and user interface.
+
+Model: Defines the database structure. In the implementation phase, Django’s Object-Relational Mapping (ORM) is used to translate Python code directly into database tables, so developers do not need to write complex, raw SQL queries.
+
+View: Contains the business logic. It receives the user's request, fetches the correct data from the Model, and passes it to the Template or API.
+
+Template: Handles the user interface (HTML/CSS) for the Back Office web portal.
+
+Django REST Framework (DRF): Because the attendance system needs to interact with a Telegram Mini App, DRF is used to build Web APIs. DRF takes the data from the database and converts it into JSON (JavaScript Object Notation) format. The Telegram Mini App can easily read this JSON data to show the user's check-in status. This creates a "single point of deployment," meaning one backend application serves both the HR web portal and the mobile Telegram Mini App.
+
+Why it was chosen: Django was chosen because of its built-in security features and its ability to handle complex relational data quickly. According to the official documentation, Django is designed to help developers take applications from concept to completion as quickly as possible [6]. The built-in admin panel also saved weeks of development time when building the Back Office for the HR staff.
+
+2. PostgreSQL Database
+PostgreSQL is a powerful, open-source object-relational database system. It uses the standard SQL language combined with advanced features to safely store and scale complex data.
+
+Implementation Use Case: An attendance system requires handling highly connected data. For example, an Attendance Record must be strictly linked to an Employee ID, which is linked to a Shift Schedule.
+
+Why it was chosen: PostgreSQL was selected because of its proven reliability and strict ACID (Atomicity, Consistency, Isolation, Durability) compliance [7]. This means that if the server crashes during a database update, the data will not be corrupted. Additionally, when hundreds of employees scan their QR codes at 8:00 AM at the same time, PostgreSQL can easily handle these concurrent connections without locking up or failing.
+
+3. Docker Container
+Docker is an open-source platform that enables developers to build, deploy, and run applications inside isolated environments called containers. A container packages the application source code together with the specific operating system libraries it needs to run.
+
+Implementation Use Case: In this project, Docker Compose is used to run multiple containers together. For example, one container runs the Django application, another runs the PostgreSQL database, and a third runs the Nginx web server. They all communicate with each other through a secure internal Docker network.
+
+Why it was chosen: Docker solves the common "it works on my machine" problem. By placing the application into a Docker container, the system is guaranteed to run exactly the same way on a developer's laptop, in the testing server, and on the live production server [8]. This makes deploying new updates very safe and fast.
+
+4. Nginx (Web Server and Reverse Proxy)
+According to its official documentation, Nginx is a high-performance web server, reverse proxy server, and load balancer [9].
+
+Implementation Use Case (Reverse Proxy): In the pre-production and production environments, direct access to the internal Django application port is blocked by firewalls for security. Nginx is used as a reverse proxy. It listens for web traffic on standard, open ports (HTTP port 80 and HTTPS port 443) using the company domain name. Once it receives a request, Nginx safely forwards it to the hidden Docker container running the application.
+
+Serving Static Files: Django is not designed to serve static files (like images, CSS, and JavaScript files) in a live production environment. Nginx is configured to serve these files directly to the user, which makes loading the Back Office website much faster.
+
+5. Linux - Debian
+Debian is a highly stable, secure, and open-source Linux operating system.
+
+Implementation Use Case: Debian serves as the foundational operating system for the company servers. Instead of using a graphical user interface (GUI) which consumes a lot of RAM and CPU, the server is managed purely through the Command Line Interface (CLI). This leaves maximum hardware resources available for the attendance application and database.
+
+Why it was chosen: For an enterprise HR system, server stability is the most important factor. Debian is known in the industry for its strict stability and security testing rather than frequent experimental updates. This provides a highly reliable environment to host the system without the risk of sudden crashes.
+[6] Django Software Foundation, "Django overview," Django Project. https://www.djangoproject.com/start/overview/ (accessed Jun. 5, 2026).
+
+[7] PostgreSQL Global Development Group, "About PostgreSQL," PostgreSQL. https://www.postgresql.org/about/ (accessed Jun. 5, 2026).
+
+[8] Docker Inc., "What is a Container?," Docker. https://www.docker.com/resources/what-container/ (accessed Jun. 5, 2026).
+
+[49 NGINX Inc., "What is NGINX?," NGINX. https://www.nginx.com/resources/glossary/nginx/ (accessed Jun. 5, 2026).
+
+
+
+
+5.2. Database Design and Entity-Relationship Overview
+
+Because the Attendance System manages a lot of connected data, showing the whole database in one large diagram can be hard to read. To make the design easier to understand and maintain, the Entity-Relationship Diagram (ERD) is split into four smaller views. Each view focuses on a specific part of the system. This helps developers organize the logic while keeping clear relationships between the different tables.
+
+Organization and Employees
+This view builds the company structure and staff records. It uses tables like companies, branches, departments, teams, and positions to organize the business. The employees table acts as the main center for all staff members within the system.
+
+For relationships, a company can have many branches, and one branch can belong to many companies using the company_branch_access table. Also, one employee connects to a main branch, but they can also be linked to other branches for special tasks (employee_mission_branches). This creates a very flexible team structure.
+
+Shift and Leave Planning
+This view handles staff working hours and time off. It sets up the expected work schedules using the shifts, shift_plans, and public_holidays tables. The main relationship here connects the employees table to shift_plan_assignments, allowing admins to give specific schedules to specific staff.
+
+In addition to normal shifts, this view also manages employee absences. It uses the leave_types, leave_balances, and leave_records tables. The leave_records are tied directly to an employee_id. This makes sure time off is tracked correctly and used in the final attendance calculation.
+
+Attendance Operation
+This is the main view that manages the real check-in and check-out process. It registers users through the scanner_qr table, linking the internal employees record to their Telegram account. When a user scans a QR code, the system checks the qrcodes and network_info tables.
+
+These tables are linked to specific branches to verify the employee's physical location and Wi-Fi network. Finally, a successful scan is saved in the employee_attendances table. This table uses foreign keys to link back to the employees and their specific shifts.
+
+Security and Audit
+This view focuses on system security and tracking data changes. It includes tables like users, auth_group, permissions, and controllers. These control who can access the Back Office and what they are allowed to do. An important note is that the users table (for system admins) is kept completely separate from the employees table (for general staff).
+
+Also, tables like activity_log and data_change_logs link to actions across the whole database. This ensures the system can track exactly what each user did. It also helps administrators restore data easily if someone makes a mistake.
+
+System Data Flow and Core Relationships
+The system works by sharing data across these four views. The employees table acts as the main bridge. System users set up the rules. The shifts, leave_records, and shift_plans define what attendance is expected for the day. When an employee tries to check in, the scanner_qr, qrcodes, and network_info tables check if the action follows the company rules. Finally, saving a real record in the employee_attendances table depends on matching the planned schedule with the real-time scan data.

@@ -1,0 +1,52 @@
+4.4 Functional Requirements
+
+The functional requirements define the services and operations that the Attendance System must provide to support attendance management and Human Resource operations.
+1. The system shall allow administrators to create, update, and manage user accounts and access permissions.
+2. The system shall support role-based access control for administrators, managers, and other authorized users.
+3. The system shall manage organizational information including companies, branches, departments, teams, positions, and employee records.
+4. The system shall allow employees to perform attendance check-in and check-out through the Telegram Mini App.
+5. The system shall validate attendance records using QR code and authorized network information.
+6. The system shall allow administrators to configure attendance QR codes and network validation settings.
+7. The system shall manage employee shift schedules and shift templates.
+8. The system shall allow managers to create, review, and publish team shift plans.
+9. The system shall support shift assignment and calendar-based schedule visualization.
+10. The system shall manage leave types, leave balances, leave records, and leave summaries.
+11. The system shall support half-day leave processing and leave balance calculation.
+12. The system shall generate attendance reports including daily reports, monthly reports, and attendance deduction reports.
+13. The system shall provide filtering and export functions for attendance reports.
+14. The system shall automatically process attendance status based on attendance records, leave records, holidays, and shift assignments.
+15. The system shall automatically detect employee absences and missing check-out records through attendance automation.
+16. The system shall maintain audit history and provide data recovery functionality for supported records.
+17. The system shall allow employees to view their attendance records through the Telegram Mini App.
+
+### 4.5 Non-Functional Requirements
+
+The non-functional requirements describe the quality attributes and operational characteristics required by the Attendance System.
+
+1. The system shall provide secure authentication and authorization mechanisms to prevent unauthorized access.
+
+2. The system shall enforce role-based access control to ensure users can only access permitted functions and data.
+
+3. The system shall maintain data consistency across attendance, shift, leave, and reporting modules.
+
+4. The system shall provide reliable attendance processing and status calculation according to defined business rules.
+
+5. The system shall support attendance validation through QR code and network verification to improve attendance security.
+
+6. The system shall provide audit and recovery mechanisms to improve data traceability and reduce the risk of data loss.
+
+7. The system shall support large attendance datasets through optimized search, filtering, and reporting operations.
+
+8. The system shall provide report export functionality in user-friendly formats such as CSV and Excel.
+
+9. The system shall provide a responsive and user-friendly interface for both administrative users and employees.
+
+10. The system shall support integration with Telegram Bot and Telegram Mini App platforms.
+
+11. The system shall support automated attendance processing to reduce manual Human Resource operations.
+
+12. The system shall be maintainable and extensible to support future business requirements and system enhancements.
+
+13. The system shall provide high availability during normal organizational working hours.
+
+14. The system shall support deployment and operation within a containerized environment using Docker technologies.

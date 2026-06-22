@@ -1,0 +1,61 @@
+• Design Pattern Report for attendance-api
+
+  This project mainly follows Django’s standard web architecture, but several software design patterns can still be
+  identified from the codebase. The strongest patterns are Layered Architecture, Chain of Responsibility, and a Facade-
+  like service layer. Other patterns such as Decorator and Repository appear only partially and are not dominant across
+  the system.
+
+   Type                               Behavioral
+   Pattern                            Chain of Responsibility
+   How It Is Applied in This Project  The middleware pipeline processes each HTTP request in sequence. Every middleware
+                                      handles one concern, then passes the request to the next handler. This is a clear
+                                      example of Chain of Responsibility in Django.
+   Evidence                           /abs/path/F:/SINET/attendance-api/core/settings.py:83, /abs/path/F:/SINET/
+                                      attendance-api/core/middleware/restrict_access.py:18
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   Type                               Architectural
+   Pattern                            Layered Architecture
+   How It Is Applied in This Project  The code is separated into clear layers: routing in urls.py, request handling in
+                                      views.py, business logic in services.py, persistence in models.py, and input
+                                      validation in forms.py and serializers.py. This improves maintainability and keeps
+                                      responsibilities separated.
+   Evidence                           /abs/path/F:/SINET/attendance-api/core/urls.py:1, /abs/path/F:/SINET/attendance-
+                                      api/shift/services.py:228
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   Type                               Structural
+   Pattern                            Facade
+   How It Is Applied in This Project  Several service classes provide a simplified interface to complex attendance and
+                                      reporting logic. Instead of exposing all low-level operations directly in views,
+                                      the system delegates them to high-level service classes. This behaves like a
+                                      Facade over a complex subsystem.
+   Evidence                           /abs/path/F:/SINET/attendance-api/shift/services.py:669, /abs/path/F:/SINET/
+                                      attendance-api/shift/services.py:3625
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   Type                               Structural
+   Pattern                            Decorator
+   How It Is Applied in This Project  Python and Django use decorators for permissions, authentication, and request
+                                      handling. However, in this project decorators are framework-level helpers rather
+                                      than a major custom design structure. Therefore, Decorator exists only in a
+                                      limited sense.
+   Evidence                           Present indirectly through Django view handling and permission-related code
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   Type                               Behavioral
+   Pattern                            Repository
+   How It Is Applied in This Project  The project partially separates business logic into service classes, but it does
+                                      not implement dedicated repository classes. Data access is still performed mostly
+                                      through Django ORM queries inside services and views. Because of that, Repository
+                                      is only weakly represented.
+   Evidence                           Seen across services.py files where ORM queries are used directly rather than
+                                      through repository objects
+
+  Conclusion
+
+  The most appropriate patterns to highlight for this project are Layered Architecture, Chain of Responsibility, and
+  Facade. These patterns are clearly visible and consistently used in the codebase. Decorator and Repository can also be
+  mentioned, but only as partial or limited implementations rather than core architectural choices.
+
+  Suggested final sentence for your report
+
+  The attendance-api project primarily applies Layered Architecture, Chain of Responsibility, and Facade-style service
+  abstraction. These patterns help separate concerns, simplify complex business workflows, and structure request
+  handling in a maintainable way, while Decorator and Repository appear only in limited form.

@@ -1,0 +1,7 @@
+  - Fixed a bug in the calendar view.
+  - Documented the project, including:
+      - API call documentation
+      - Telegram Mini App flow
+      - ERD overview
+      - Feature documentation
+  - Restructured the project documentation for better understanding.

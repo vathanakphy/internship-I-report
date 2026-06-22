@@ -1,0 +1,76 @@
+5. Implementation
+This chapter will detail about how the project was built after analysis the business requiment and software specification then turn this idea into the actult coding implmentaiton of the system. In also involve development tesing stagging and deployment as well.
+5.1 Enviromentsetup
+In this projet we have many difference enbiroment to setup before turn into the acult result in production .
+testing 
+ first thing first is testing envieomtn which is our local machine that we using docker container with all the dependency that need is run in side the docker include database,api,backend,bot, and suign docker ngix with aphache server for hosting the mini app as the html,  onemroething we need to create the two telegram group one is for staff and antoehr is for hr to tracking the attendance which was scan or not, and also we need ot used. for telegream bot that we create is using botfater. as well and also using Faker a python librncy to generate the data and we try to simulate the data like a production server by setup condition and all the table must be simriary to the real data. the testing envieomtn provited us a rapid development which we can deloper our fature more effenciencly. and also we used the VS code defult tunnel to export port whie we know that the telegram mini app is accept only the https so we need to ahve something to export our port to the public so using th default vs ccode provide more secure and the domain is unchanged for each port which make us easy for tesing wihotu change envoirment every time if compare to cloudfalre , ngrock vs code default port is tyhe best for development process. that also allow to share the system into the superviwe to tesing easily without bring laotop for acurlt test and decusing.thse testing evneoemtn provide me to develop the feature of that project.
+ pre production enviroemnt
+in this step everying is was test in tesing enveooemtn all feature is dotn have bug but as we know local tesing is not engouhr to deploy to production that why we chose Pre production envioemtn is a linus Debian server (a self host company sever ) which we call Docker01 (intenal naming ) that we setup enviemnt is close to production, which in that stage we used the docker setip simualr to local tesing but change soemhign is about the proxy that for serity concern we jsut port only one port for that systems is 6002 which we need more container is nginx to revers the proxy which i deisgn that all /api revers to pport 6001 and /miniapp revers to port 6003. and for database is no more local database since our data isnot to large the pre production envieoent is just the copy database from the production databae. we used pg dump to copy data base from prod to pre prod and then we test with the real coditon the acult procuton envoement to make sure eveyinng is working fine before turn into prod to the real user opretion. during this stage we need to preapte the ddeployment script that alalow the system enginenr is deploy more effecnly we need to try the deploy ploy by check the branch ; pull the code last version adn then run the container and laso involve run migration when data base is change needed. and also try to simulate the rollback as the backup plan when deployment is error so in this stage we simularte all the possible case which can happen make sure when production is go live updatodate no more error or easy to fallback to the stable version as we needed.
+
+the databae is share host we have another sever call MonDB that host all the database of company so the prod and pre prod is using the same database is the postgreast hosting.
+
+production enviroemnt 
+in this step i dont envolment much as the limitation of the intern while i help system enginer asis to run the deployment when needed and the setup is similar to pre prod except the proxy as we run in the didacte server because the produuiton is also the share dingit so we expose onlu port 80.443 to deplyemnt the sever adn using nginx to handle the proxty to the correct servvies. in that stage we have a log for trcking all the behavior of that user and make us easy for debugging 
+
+
+5. Implementation
+
+This chapter describes how the Attendance System was implemented after completing the requirement analysis and system design phases. It explains how the business requirements were transformed into actual software components, including environment preparation, application development, testing, deployment procedures, and production operations. The implementation process was divided into multiple environments to ensure that new features could be developed, tested, validated, and deployed safely.
+
+5.1 Environment Setup
+
+To support the development lifecycle, three main environments were used throughout the project: Local Development and Testing, Pre-Production (Staging), and Production. Each environment served a different purpose and helped ensure software quality before deployment to end users.
+
+5.1.1 Local Development and Testing Environment
+
+The first stage of development was performed on local machines. A Docker-based environment was created to provide a consistent and isolated workspace for development and testing. Multiple containers were used to run the required services, including the PostgreSQL database, Django backend API, Telegram bot, and Mini App web server.
+
+For the Mini App, Nginx was used to host the static HTML, CSS, and JavaScript files. This allowed the Telegram Mini App to be tested locally before deployment.
+
+Since the system relied heavily on Telegram integration, a Telegram Bot was created using BotFather. In addition, separate Telegram groups were configured for employees and HR staff to support attendance notifications and operational testing.
+
+To simulate production conditions, the Faker Python library was used to generate large volumes of test data. Employee records, attendance logs, departments, and other related data were generated to resemble real-world usage scenarios. The database structure in the testing environment was kept consistent with the production database schema to ensure accurate testing results.
+
+Telegram Mini Apps require HTTPS connections; therefore, the local environment needed a secure public URL. VS Code Tunneling was used to expose local services through HTTPS. Compared to alternatives such as Ngrok or Cloudflare Tunnel, VS Code Tunneling provided a stable development URL and reduced the need for frequent configuration changes. It also enabled supervisors and team members to access and test the application remotely during development.
+
+This environment provided a fast and flexible platform for implementing new features, debugging issues, and performing initial validation before moving changes to the staging environment.
+
+5.1.2 Pre-Production (Staging) Environment
+
+After successful local testing, new features were deployed to the Pre-Production environment for integration testing and user acceptance validation. This environment was hosted on an internal Debian Linux server known as Docker01.
+
+The Docker architecture was similar to the local environment but was configured to more closely resemble the production infrastructure. Multiple containers were deployed for the backend application, Mini App, cron jobs, and supporting services.
+
+To improve security and simplify network management, Nginx was configured as a reverse proxy. External traffic was exposed through a single entry point while requests were internally routed to the appropriate services. Requests to /api were forwarded to the backend API service, while requests to /miniapp were routed to the Mini App service.
+
+The staging environment served as the primary platform for validating new releases using real business scenarios. Production data was copied into the staging environment using PostgreSQL backup and restoration tools such as pg_dump, allowing testing to be performed with realistic datasets and organizational structures.
+
+Deployment procedures were also tested extensively during this stage. Activities included:
+
+Verifying deployment branches.
+Pulling the latest source code from the repository.
+Rebuilding and restarting Docker containers.
+Executing database migrations when schema changes were required.
+Verifying application functionality after deployment.
+
+Rollback procedures were also tested to ensure system recovery in case deployment failures occurred. These simulations helped establish a reliable deployment process and reduced operational risks when releasing updates to production.
+
+5.1.3 Database Infrastructure
+
+The Attendance System uses PostgreSQL as its primary database management system. Instead of hosting separate databases on each application server, the company maintains a dedicated shared database server known internally as MonDB.
+
+Both the Pre-Production and Production environments connect to this centralized PostgreSQL server. This architecture simplifies database administration, backup management, and monitoring while allowing multiple internal applications to share the same database infrastructure.
+
+To support testing activities, production database snapshots were periodically copied to the staging environment. This ensured that testing was performed using realistic data volumes and business conditions, allowing potential issues to be identified before production deployment.
+
+5.1.4 Production Environment
+
+The Production environment is the live system used daily by company employees. Due to organizational security policies, deployment activities were primarily performed by System Engineers, while my involvement was limited to assisting with deployment preparation, validation, and post-deployment testing.
+
+The production architecture is similar to the staging environment but runs on dedicated infrastructure designed for operational use. Standard HTTP and HTTPS ports (80 and 443) are exposed externally, while Nginx routes incoming requests to the appropriate internal services.
+
+Before each deployment, the release package was validated in the staging environment. Once approved, System Engineers performed the deployment process, including source code updates, container restarts, database migrations, and service verification.
+
+The production environment also includes monitoring and logging mechanisms that record system activities and user interactions. These logs are essential for troubleshooting, auditing, and diagnosing operational issues. By analyzing application logs, administrators can quickly identify errors, investigate user-reported issues, and maintain system stability.
+
+The use of separate development, staging, and production environments significantly improved software quality and reduced deployment risks throughout the project lifecycle.

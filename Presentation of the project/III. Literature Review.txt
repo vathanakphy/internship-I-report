@@ -1,0 +1,22 @@
+III. Literature Review
+- Existing Attendance Systems
+- Web Framework Concepts
+- Related Technologies (Automation)
+IV. Project Analysis and Concepts
+- Existing Features
++ New Features Developed
+- Shift Management
+- Leave Management
+- Attendance Reporting
+(more)
+V. Detailed Concepts
+- Web development Concept
+- ERD
+- Telegram Mini App
+- RBAC
+- Server Side Processing
+- Automation and Cron Jobs
+- Docker Deployment Environment
+- Software Testing 
+VI. Implementation
+explain feature that implement in detail include UML diagram
