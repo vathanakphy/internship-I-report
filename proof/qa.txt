@@ -1,0 +1,878 @@
+Found 290 test(s).
+docker : Creating test database for alias 'default' ('test_hr_db')...
+At line:1 char:1
++ docker compose -f docker-compose.local.yml exec backend  python manag ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Creating test d...test_hr_db')...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Operations to perform:
+  Synchronize unmigrated apps: core, corsheaders, import_export, messages, rest_framework, rest_framework_simplejwt, staticfiles
+  Apply all migrations: activity_log, admin, audit, auth, authtoken, contenttypes, leave, notifications, permissions, preset_management, qr_code, sale_survey_users, sale_surveys, sessions, shift, user_group, users
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying preset_management.0001_initial... OK
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying users.0001_initial... OK
+  Applying activity_log.0001_initial... OK
+  Applying activity_log.0002_rename_tg_id_useractivitylog_phone... OK
+  Applying activity_log.0003_alter_useractivitylog_ip_address... OK
+  Applying activity_log.0004_remove_useractivitylog_employee_id... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying audit.0001_initial... OK
+  Applying audit.0002_alter_datachangelog_options... OK
+  Applying audit.0003_alter_datachangelog_options... OK
+  Applying audit.0004_alter_datachangelog_options... OK
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+  Applying authtoken.0003_tokenproxy... OK
+  Applying preset_management.0002_alter_departments_options_alter_employees_options_and_more... OK
+  Applying preset_management.0003_alter_departments_options_alter_employees_options_and_more... OK
+  Applying preset_management.0004_alter_branchs_options_alter_departments_options_and_more... OK
+  Applying preset_management.0005_alter_branchs_options_alter_departments_options_and_more... OK
+  Applying preset_management.0002_alter_departments_position_id... OK
+  Applying preset_management.0003_alter_employees_branch_id_and_more... OK
+  Applying preset_management.0004_employees_employees_departm_89ae7c_idx_and_more... OK
+  Applying preset_management.0006_merge_20240404_0934... OK
+  Applying preset_management.0005_employees_profile... OK
+  Applying preset_management.0007_merge_0005_employees_profile_0006_merge_20240404_0934... OK
+  Applying qr_code.0001_initial... OK
+  Applying qr_code.0002_qrcodegenerations_qr_image... OK
+  Applying qr_code.0003_alter_bluetoothinfo_uuid_alter_networkinfo_ipv4_and_more... OK
+  Applying qr_code.0004_alter_qrcodegenerations_hash... OK
+  Applying qr_code.0005_alter_bluetoothinfo_options_and_more... OK
+  Applying qr_code.0006_qrcodegenerations_network_info... OK
+  Applying qr_code.0007_alter_qrcodegenerations_network_info... OK
+  Applying qr_code.0008_alter_qrcodegenerations_network_info... OK
+  Applying qr_code.0009_alter_qrcodegenerations_network_info... OK
+  Applying qr_code.0010_alter_userattendances_phone... OK
+  Applying qr_code.0011_bluetoothinfo_active_networkinfo_active_and_more... OK
+  Applying qr_code.0012_networkinfo_name... OK
+  Applying preset_management.0008_alter_branchs_bank_account_alter_branchs_code_and_more... OK
+  Applying preset_management.0009_remove_departments_position_id_and_more... OK
+  Applying preset_management.0010_alter_branchs_branch_email_and_more... OK
+  Applying shift.0001_initial... OK
+  Applying shift.0002_shiftmodel_color_code... OK
+  Applying shift.0003_alter_shiftmodel_end_time_and_more... OK
+  Applying shift.0004_alter_shiftmodel_color_code... OK
+  Applying shift.0005_employeeattendances_absent_and_more... OK
+  Applying shift.0006_rename_end_time_shiftmodel_end_time1_and_more... OK
+  Applying shift.0007_rename_nomal_employeeattendances_normal_in_and_more... OK
+  Applying shift.0008_rename_working_hours_employeeattendances_work_time1_and_more... OK
+  Applying shift.0009_alter_employeeattendances_work_time1_and_more... OK
+  Applying shift.0010_rename_absent_employeeattendances_absent_check_in_and_more... OK
+  Applying shift.0011_alter_employeeshifts_options... OK
+  Applying shift.0012_remove_shiftmodel_lunch_break_end_and_more... OK
+  Applying shift.0013_alter_employeeattendances_employee_shift_id... OK
+  Applying preset_management.0011_teams... OK
+  Applying preset_management.0012_employees_team_id... OK
+  Applying preset_management.0013_employees_is_manager_employees_manager... OK
+  Applying preset_management.0014_alter_employees_options... OK
+  Applying preset_management.0015_alter_employees_options... OK
+  Applying shift.0014_alter_employeeattendances_employee_id... OK
+  Applying shift.0015_employeeattendances_is_full_day... OK
+  Applying shift.0016_employeeattendances_shift_name... OK
+  Applying shift.0017_attendancesanalysis... OK
+  Applying shift.0018_employeeattendances_shift_and_more... OK
+  Applying shift.0019_shiftmodel_type... OK
+  Applying shift.0020_shiftmodel_weekday_rules... OK
+  Applying shift.0021_publicholiday_shiftplan_shiftplanassignment_and_more... OK
+  Applying shift.0022_remove_custom_shift_assignment_fields... OK
+  Applying shift.0023_remove_shiftplanassignment_holiday_overridden... OK
+  Applying shift.0024_shiftmodel_internal_only... OK
+  Applying shift.0025_rename_shifts_internal_51ee96_idx_shifts_interna_91bbfb_idx... OK
+  Applying shift.0026_alter_shiftplanassignment_shift_plan... OK
+  Applying preset_management.0016_employees_base_shift_template... OK
+  Applying preset_management.0017_company_branchs_company_employees_company... OK
+  Applying preset_management.0018_alter_company_code... OK
+  Applying preset_management.0019_departments_company... OK
+  Applying preset_management.0020_branch_public_access_and_mission_branch... OK
+  Applying preset_management.0021_alter_companybranchaccess_options_and_more... OK
+  Applying leave.0001_initial... OK
+  Applying leave.0002_remove_leavetype_unique_leave_type_code_per_company_and_more... OK
+  Applying leave.0003_leaverecord_half_day_period_leaverecord_is_half_day... OK
+  Applying leave.0004_leaverecord_replacement_staff... OK
+  Applying leave.0005_alter_leavebalance_employee_and_more... OK
+  Applying notifications.0001_initial... OK
+  Applying permissions.0001_initial... OK
+  Applying permissions.0002_alter_controllers_access_description_and_more... OK
+  Applying preset_management.0022_alter_departments_description_and_more... OK
+  Applying qr_code.0013_networkinfo_description_and_more... OK
+  Applying qr_code.0014_alter_networkinfo_gps_alter_qrcodegenerations_gps_and_more... OK
+  Applying qr_code.0015_require_qrcodegenerations_gps... OK
+  Applying qr_code.0016_scannerqrcode_is_attendance_required... OK
+  Applying qr_code.0017_sync_scanner_employee_fk_cascade... OK
+  Applying qr_code.0018_scannerqrcode_allow_manual_time_selection... OK
+  Applying qr_code.0019_alter_networkinfo_description_and_more... OK
+  Applying sale_survey_users.0001_initial... OK
+  Applying sale_surveys.0001_initial... OK
+  Applying sale_surveys.0002_alter_salesurveymodel_options... OK
+  Applying sessions.0001_initial... OK
+  Applying shift.0027_employeeattendances_note... OK
+  Applying shift.0028_alter_attendancesanalysis_employee_id_and_more... OK
+  Applying shift.0029_publicholiday_month_day_fields... OK
+  Applying shift.0030_publicholiday_month_day_refactor... OK
+  Applying shift.0031_rename_public_holi_holiday_1b739a_idx_public_holi_holiday_1605f7_idx... OK
+  Applying shift.0032_shiftmodel_company_scope... OK
+  Applying shift.0033_publicholiday_company_scope... OK
+  Applying shift.0034_fix_attendancesanalysis_fk_integrity... OK
+  Applying shift.0035_rename_public_holi_company_2b6456_idx_public_holi_company_397894_idx_and_more... OK
+  Applying shift.0036_employeeattendances_status... OK
+  Applying shift.0037_attendance_status_simplify... OK
+  Applying shift.0038_employeeattendances_half_day_leave_status... OK
+  Applying shift.0039_employeeattendances_dayoff_status... OK
+  Applying shift.0040_employeeattendances_structured_half_day_leave... OK
+  Applying shift.0041_shiftplan_team_plan_view_permission... OK
+  Applying shift.0042_shiftplan_team_plan_base_shift_edit_permission... OK
+  Applying shift.0043_publicholiday_list_permission... OK
+  Applying shift.0044_preserve_attendance_history_on_employee_delete... OK
+  Applying shift.0045_teamshiftoption... OK
+  Applying shift.0046_rename_team_shift_o_team_id_34f35f_idx_team_shift__team_id_070114_idx_and_more... OK
+  Applying shift.0047_alter_employeeattendances_status... OK
+  Applying user_group.0001_initial... OK
+  Applying user_group.0002_remove_usergroup_user_group... OK
+  Applying user_group.0003_alter_usergroup_description... OK
+  Applying users.0002_rename_active_usersmodel_is_active... OK
+  Applying users.0002_alter_usersmodel_groups_and_more... OK
+  Applying users.0003_merge_20240412_1639... OK
+  Applying users.0004_alter_usersmodel_options_and_more... OK
+  Applying users.0005_alter_usersmodel_options... OK
+  Applying users.0006_alter_usersmodel_email_alter_usersmodel_phone... OK
+  Applying users.0007_alter_usersmodel_employee_id... OK
+  Applying users.0008_alter_usersmodel_employee_id... OK
+  Applying users.0009_usersmodel_temporary_password... OK
+System check identified some issues:
+
+WARNINGS:
+users.UsersModel.employee_id: (fields.W342) Setting unique=True on a ForeignKey has the same effect as using a OneToOneField.
+	HINT: ForeignKey(unique=True) is usually better served by a OneToOneField.
+
+System check identified 1 issue (0 silenced).
+test_action_log_detail_renders_create_log (tests.test_audit.test_action_log_views.ActionLogViewsTest.test_action_log_detail_renders_create_log)
+Action log detail page renders for a CREATE log entry. ... ok
+test_action_log_detail_renders_delete_log (tests.test_audit.test_action_log_views.ActionLogViewsTest.test_action_log_detail_renders_delete_log)
+Action log detail page renders for a DELETE log entry. ... ok
+test_action_log_detail_renders_update_log (tests.test_audit.test_action_log_views.ActionLogViewsTest.test_action_log_detail_renders_update_log)
+Action log detail page renders for an UPDATE log entry. ... ok
+test_action_log_page_contains_table_entries (tests.test_audit.test_action_log_views.ActionLogViewsTest.test_action_log_page_contains_table_entries)
+Action log list contains the pre-created branch audit entries. ... ok
+test_action_log_page_renders (tests.test_audit.test_action_log_views.ActionLogViewsTest.test_action_log_page_renders)
+Action log list page renders correctly for superuser. ... ok
+test_audit_logs_are_all_stored_in_db (tests.test_audit.test_action_log_views.ActionLogViewsTest.test_audit_logs_are_all_stored_in_db)
+Verify all 3 audit actions (CREATE, UPDATE, DELETE) are persisted. ... ok
+test_action_log_detail_context_contains_exact_changed_fields_data 
+(tests.test_audit.test_audit_context_accuracy.AuditContextAccuracyTest.test_action_log_detail_context_contains_exact_changed_fields_data) ... ok
+test_changed_field_pairing_uses_old_and_new_display_values_correctly 
+(tests.test_audit.test_audit_context_accuracy.AuditContextAccuracyTest.test_changed_field_pairing_uses_old_and_new_display_values_correctly) ... ok
+test_recycle_bin_filters_return_exact_matching_logs 
+(tests.test_audit.test_audit_context_accuracy.AuditContextAccuracyTest.test_recycle_bin_filters_return_exact_matching_logs) ... ok
+test_restore_history_restores_exact_deleted_record_state 
+(tests.test_audit.test_audit_context_accuracy.AuditContextAccuracyTest.test_restore_history_restores_exact_deleted_record_state) ... ok
+test_restricted_user_cannot_see_out_of_scope_audit_logs 
+(tests.test_audit.test_audit_context_accuracy.AuditContextAccuracyTest.test_restricted_user_cannot_see_out_of_scope_audit_logs) ... ok
+test_audit_logger_create_update_delete (tests.test_audit.test_audit_logic.AuditLogicTest.test_audit_logger_create_update_delete) ... ok
+test_restore_audit_log (tests.test_audit.test_audit_logic.AuditLogicTest.test_restore_audit_log) ... ok
+test_recycle_bin_page_renders (tests.test_audit.test_recycle_bin_views.RecycleBinViewsTest.test_recycle_bin_page_renders)
+Recycle bin page renders correctly and shows deleted records. ... ok
+test_recycle_bin_page_shows_deleted_entries (tests.test_audit.test_recycle_bin_views.RecycleBinViewsTest.test_recycle_bin_page_shows_deleted_entries)
+Recycle bin contains the pre-created DELETE audit log. ... ok
+test_leave_balance_edit_get (tests.test_leave.test_leave_balance_views.LeaveBalanceViewsTest.test_leave_balance_edit_get)
+GET renders the edit form with existing balance data. ... Superuser loading accessible employees
+ok
+test_leave_balance_edit_post_valid (tests.test_leave.test_leave_balance_views.LeaveBalanceViewsTest.test_leave_balance_edit_post_valid)
+POST updates the leave balance entitled days. ... Superuser loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_balance_list_renders (tests.test_leave.test_leave_balance_views.LeaveBalanceViewsTest.test_leave_balance_list_renders)
+Leave balance list renders correctly for superuser. ... Superuser loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_record_company_dependencies_return_exact_valid_employees_and_types 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_record_company_dependencies_return_exact_valid_employees_and_types) ... 
+Superuser loading accessible employees
+ok
+test_leave_record_create_updates_leave_balance_exactly 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_record_create_updates_leave_balance_exactly) ... Superuser loading 
+accessible employees
+Superuser loading accessible employees
+ok
+test_leave_record_delete_restores_leave_balance_exactly 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_record_delete_restores_leave_balance_exactly) ... ok
+test_leave_record_edit_updates_leave_balance_exactly 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_record_edit_updates_leave_balance_exactly) ... Superuser loading 
+accessible employees
+Superuser loading accessible employees
+ok
+test_leave_record_employee_dependencies_return_exact_valid_leave_types 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_record_employee_dependencies_return_exact_valid_leave_types) ... 
+Superuser loading accessible employees
+ok
+test_leave_record_list_filters_return_exactly_expected_records 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_record_list_filters_return_exactly_expected_records) ... Superuser 
+loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_summary_context_matches_employee_year_data_exactly 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_summary_context_matches_employee_year_data_exactly) ... Superuser 
+loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_type_delete_in_use_branch_returns_deactivation_context_values 
+(tests.test_leave.test_leave_dependency_views.LeaveDependencyViewsTest.test_leave_type_delete_in_use_branch_returns_deactivation_context_values) ... ok
+test_calculate_leave_duration (tests.test_leave.test_leave_logic.LeaveLogicTest.test_calculate_leave_duration) ... ok
+test_leave_record_form_overlap (tests.test_leave.test_leave_logic.LeaveLogicTest.test_leave_record_form_overlap) ... Superuser loading accessible employees
+ok
+test_leave_type_form_duplicate_name (tests.test_leave.test_leave_logic.LeaveLogicTest.test_leave_type_form_duplicate_name) ... ok
+test_sync_leave_balance_and_record_logic (tests.test_leave.test_leave_logic.LeaveLogicTest.test_sync_leave_balance_and_record_logic) ... ok
+test_leave_record_create_get (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_create_get)
+GET renders the blank leave record creation form. ... Superuser loading accessible employees
+ok
+test_leave_record_create_post_invalid (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_create_post_invalid)
+POST with missing employee stays on the form without creating a record. ... Superuser loading accessible employees
+ok
+test_leave_record_create_post_valid (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_create_post_valid)
+POST with valid data creates a leave record in CANCELLED status. ... Superuser loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_record_delete_get (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_delete_get)
+GET renders the confirmation page. ... ok
+test_leave_record_delete_post (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_delete_post)
+POST removes the leave record from the DB. ... ok
+test_leave_record_edit_get (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_edit_get)
+GET renders the edit form with existing record data. ... Superuser loading accessible employees
+ok
+test_leave_record_edit_post_valid (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_edit_post_valid)
+POST updates the leave record status. ... Superuser loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_record_list_renders (tests.test_leave.test_leave_record_views.LeaveRecordViewsTest.test_leave_record_list_renders)
+Leave record list renders correctly for superuser. ... Superuser loading accessible employees
+Superuser loading accessible employees
+ok
+test_employee_leave_summary_totals_equal_underlying_records 
+(tests.test_leave.test_leave_summary_computation.LeaveSummaryComputationTest.test_employee_leave_summary_totals_equal_underlying_records) ... ok
+test_leave_balance_row_computation_matches_expected_remaining_values 
+(tests.test_leave.test_leave_summary_computation.LeaveSummaryComputationTest.test_leave_balance_row_computation_matches_expected_remaining_values) ... 
+Superuser loading accessible employees
+ok
+test_leave_summary_usage_rows_equal_underlying_records 
+(tests.test_leave.test_leave_summary_computation.LeaveSummaryComputationTest.test_leave_summary_usage_rows_equal_underlying_records) ... Superuser loading 
+accessible employees
+ok
+test_leave_summary_renders (tests.test_leave.test_leave_summary_views.LeaveSummaryViewsTest.test_leave_summary_renders)
+Leave summary dashboard renders correctly for superuser. ... Superuser loading accessible employees
+Superuser loading accessible employees
+ok
+test_leave_type_create_get (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_create_get)
+GET renders the blank leave type creation form. ... ok
+test_leave_type_create_post_invalid (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_create_post_invalid)
+POST with missing name stays on the form without creating a record. ... ok
+test_leave_type_create_post_valid (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_create_post_valid)
+POST with valid data creates the leave type and shows success. ... ok
+test_leave_type_delete_post_clean (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_delete_post_clean)
+POST deletes a leave type not referenced by any records. ... ok
+test_leave_type_delete_post_in_use_deactivates (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_delete_post_in_use_deactivates)
+POST on a leave type that has records deactivates it instead of deleting. ... ok
+test_leave_type_edit_get (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_edit_get)
+GET renders the edit form with existing leave type data. ... ok
+test_leave_type_edit_post_invalid (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_edit_post_invalid)
+POST with empty name returns the form without saving. ... ok
+test_leave_type_edit_post_valid (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_edit_post_valid)
+POST with valid data updates the leave type entitlement. ... ok
+test_leave_type_list_renders (tests.test_leave.test_leave_type_views.LeaveTypeViewsTest.test_leave_type_list_renders)
+Leave type list renders and contains the pre-created leave type. ... Superuser loading accessible employees
+ok
+test_attendance_management_permissions (tests.test_permissions.test_audit_permissions.AuditPermissionsTest.test_attendance_management_permissions) ... ok
+test_audit_management_permissions (tests.test_permissions.test_audit_permissions.AuditPermissionsTest.test_audit_management_permissions) ... ok
+test_service_layer_branch_isolation (tests.test_permissions.test_company_isolation.CompanyIsolationTest.test_service_layer_branch_isolation)
+Test that CompanyScopeService only returns branches for Company A. ... ok
+test_service_layer_employee_isolation (tests.test_permissions.test_company_isolation.CompanyIsolationTest.test_service_layer_employee_isolation)
+Test that EmployeeAccessService only returns employees for Company A. ... Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_view_layer_direct_access_blocked (tests.test_permissions.test_company_isolation.CompanyIsolationTest.test_view_layer_direct_access_blocked)
+Test that accessing another company's employee directly returns 404. ... ok
+test_view_layer_employee_list_isolation (tests.test_permissions.test_company_isolation.CompanyIsolationTest.test_view_layer_employee_list_isolation)
+Test that the EmployeeList view only shows Company A's employees. ... ok
+test_admin_can_access_add_view (tests.test_permissions.test_feature_permissions.FeaturePermissionsTest.test_admin_can_access_add_view)
+Test that a user WITH 'add_employees' permission can access the add form. ... ok
+test_admin_can_access_edit_view (tests.test_permissions.test_feature_permissions.FeaturePermissionsTest.test_admin_can_access_edit_view)
+Test that a user WITH 'change_employees' permission can access the edit form. ... ok
+test_reader_can_access_list_view (tests.test_permissions.test_feature_permissions.FeaturePermissionsTest.test_reader_can_access_list_view)
+Test that a user with 'list_employee' permission can access the list view. ... ok
+test_reader_cannot_access_add_view (tests.test_permissions.test_feature_permissions.FeaturePermissionsTest.test_reader_cannot_access_add_view)
+Test that a user WITHOUT 'add_employees' permission is blocked from adding. ... ok
+test_reader_cannot_access_edit_view (tests.test_permissions.test_feature_permissions.FeaturePermissionsTest.test_reader_cannot_access_edit_view)
+Test that a user WITHOUT 'change_employees' permission is blocked from editing. ... ok
+test_leave_balance_management_permissions (tests.test_permissions.test_leave_permissions.LeavePermissionsTest.test_leave_balance_management_permissions) 
+... Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_leave_record_management_permissions (tests.test_permissions.test_leave_permissions.LeavePermissionsTest.test_leave_record_management_permissions) ... 
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_leave_type_management_permissions (tests.test_permissions.test_leave_permissions.LeavePermissionsTest.test_leave_type_management_permissions) ... 
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_branch_permission_list_returns_exact_expected_rows 
+(tests.test_permissions.test_permission_render_data.PermissionRenderDataTest.test_branch_permission_list_returns_exact_expected_rows) ... ok
+test_category_add_success_sets_showpop_context_correctly 
+(tests.test_permissions.test_permission_render_data.PermissionRenderDataTest.test_category_add_success_sets_showpop_context_correctly) ... ok
+test_category_edit_success_sets_show_sweet_alert_context_correctly 
+(tests.test_permissions.test_permission_render_data.PermissionRenderDataTest.test_category_edit_success_sets_show_sweet_alert_context_correctly) ... ok
+test_controller_list_context_contains_exact_expected_rows_and_action_urls 
+(tests.test_permissions.test_permission_render_data.PermissionRenderDataTest.test_controller_list_context_contains_exact_expected_rows_and_action_urls) 
+... ok
+test_controller_permission_assignment_persists_exact_selected_permissions 
+(tests.test_permissions.test_permission_render_data.PermissionRenderDataTest.test_controller_permission_assignment_persists_exact_selected_permissions) 
+... ok
+test_delete_confirmation_context_contains_expected_target_object_data 
+(tests.test_permissions.test_permission_render_data.PermissionRenderDataTest.test_delete_confirmation_context_contains_expected_target_object_data) ... ok
+test_branch_permissions (tests.test_permissions.test_preset_permissions.PresetPermissionsTest.test_branch_permissions) ... ok
+test_department_permissions (tests.test_permissions.test_preset_permissions.PresetPermissionsTest.test_department_permissions) ... ok
+test_position_permissions (tests.test_permissions.test_preset_permissions.PresetPermissionsTest.test_position_permissions) ... ok
+test_team_permissions (tests.test_permissions.test_preset_permissions.PresetPermissionsTest.test_team_permissions) ... Loaded employee scope for 
+accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_network_management_permissions (tests.test_permissions.test_qr_permissions.QRPermissionsTest.test_network_management_permissions) ... ok
+test_qr_generation_management_permissions (tests.test_permissions.test_qr_permissions.QRPermissionsTest.test_qr_generation_management_permissions) ... ok
+test_scanner_management_permissions (tests.test_permissions.test_qr_permissions.QRPermissionsTest.test_scanner_management_permissions) ... Loaded employee 
+scope for accessible employees
+Accessible employee queryset resolved for company scope
+Employee access check compared company scope
+Employee access check passed for same company
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_employee_shift_assignment_permissions (tests.test_permissions.test_shift_permissions.ShiftPermissionsTest.test_employee_shift_assignment_permissions) 
+... Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+Employee access check compared company scope
+Employee access check passed for same company
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_public_holiday_management_permissions (tests.test_permissions.test_shift_permissions.ShiftPermissionsTest.test_public_holiday_management_permissions) 
+... ok
+test_report_attendance_management_permissions 
+(tests.test_permissions.test_shift_permissions.ShiftPermissionsTest.test_report_attendance_management_permissions) ... Loaded employee scope for 
+accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+test_shift_management_permissions (tests.test_permissions.test_shift_permissions.ShiftPermissionsTest.test_shift_management_permissions) ... ok
+test_team_plan_management_permissions (tests.test_permissions.test_shift_permissions.ShiftPermissionsTest.test_team_plan_management_permissions) ... ok
+test_group_management_permissions (tests.test_permissions.test_user_permissions.UserPermissionsTest.test_group_management_permissions) ... ok
+test_user_management_permissions (tests.test_permissions.test_user_permissions.UserPermissionsTest.test_user_management_permissions) ... ok
+test_add_branch_view_get (tests.test_preset_management.test_branch_views.BranchViewsTest.test_add_branch_view_get)
+Test that the add branch view renders the form properly. ... ok
+test_add_branch_view_post_invalid_data (tests.test_preset_management.test_branch_views.BranchViewsTest.test_add_branch_view_post_invalid_data)
+Test that submitting invalid data returns to the form with errors. ... ok
+test_add_branch_view_post_valid_data (tests.test_preset_management.test_branch_views.BranchViewsTest.test_add_branch_view_post_valid_data)
+Test that submitting valid data creates a new branch and redirects. ... ok
+test_branch_detail_view (tests.test_preset_management.test_branch_views.BranchViewsTest.test_branch_detail_view)
+Test that the branch detail view renders properly. ... ok
+test_branch_list_view_forbidden_for_regular_user 
+(tests.test_preset_management.test_branch_views.BranchViewsTest.test_branch_list_view_forbidden_for_regular_user)
+Test that a regular user without list_branch permission gets redirected or denied. ... ok
+test_branch_list_view_renders_template_for_admin 
+(tests.test_preset_management.test_branch_views.BranchViewsTest.test_branch_list_view_renders_template_for_admin)
+Test that branch list view returns 200 and renders the correct template for superuser. ... ok
+test_delete_branch_view_get (tests.test_preset_management.test_branch_views.BranchViewsTest.test_delete_branch_view_get)
+Test that viewing the delete page renders the list template. ... ok
+test_delete_branch_view_post (tests.test_preset_management.test_branch_views.BranchViewsTest.test_delete_branch_view_post)
+Test that POSTing to the delete view removes the branch. ... ok
+test_edit_branch_view_get (tests.test_preset_management.test_branch_views.BranchViewsTest.test_edit_branch_view_get)
+Test that the edit branch view loads correctly. ... ok
+test_edit_branch_view_post_valid_data (tests.test_preset_management.test_branch_views.BranchViewsTest.test_edit_branch_view_post_valid_data)
+Test editing an existing branch updates its data. ... ok
+test_add_company_view_get (tests.test_preset_management.test_company_views.CompanyViewsTest.test_add_company_view_get)
+Test that the add company view renders the form properly. ... ok
+test_add_company_view_post_duplicate_data (tests.test_preset_management.test_company_views.CompanyViewsTest.test_add_company_view_post_duplicate_data)
+Test that submitting duplicate data returns to the form with errors. ... ok
+test_add_company_view_post_invalid_data (tests.test_preset_management.test_company_views.CompanyViewsTest.test_add_company_view_post_invalid_data)
+Test that submitting invalid data returns to the form with errors. ... ok
+test_add_company_view_post_valid_data (tests.test_preset_management.test_company_views.CompanyViewsTest.test_add_company_view_post_valid_data)
+Test that submitting valid data creates a new company and redirects. ... ok
+test_company_list_view_forbidden_for_regular_user 
+(tests.test_preset_management.test_company_views.CompanyViewsTest.test_company_list_view_forbidden_for_regular_user)
+Test that a regular user without view_company permission gets PermissionDenied. ... ok
+test_company_list_view_renders_template_for_admin 
+(tests.test_preset_management.test_company_views.CompanyViewsTest.test_company_list_view_renders_template_for_admin)
+Test that company list view returns 200 and renders the correct template for superuser. ... ok
+test_delete_company_view_get_renders_template 
+(tests.test_preset_management.test_company_views.CompanyViewsTest.test_delete_company_view_get_renders_template)
+Test that viewing the delete page renders the confirmation list template. ... ok
+test_delete_company_view_post (tests.test_preset_management.test_company_views.CompanyViewsTest.test_delete_company_view_post)
+Test that POSTing to the delete view removes the company. ... ok
+test_edit_company_view_get (tests.test_preset_management.test_company_views.CompanyViewsTest.test_edit_company_view_get)
+Test that the edit company view loads the form correctly. ... ok
+test_edit_company_view_post_valid_data (tests.test_preset_management.test_company_views.CompanyViewsTest.test_edit_company_view_post_valid_data)
+Test editing an existing company updates its data. ... ok
+test_add_department_view_get (tests.test_preset_management.test_department_views.DepartmentViewsTest.test_add_department_view_get)
+Test that the add department view renders the form properly. ... ok
+test_add_department_view_post_invalid_data 
+(tests.test_preset_management.test_department_views.DepartmentViewsTest.test_add_department_view_post_invalid_data)
+Test that submitting invalid data returns to the form with errors. ... ok
+test_add_department_view_post_valid_data (tests.test_preset_management.test_department_views.DepartmentViewsTest.test_add_department_view_post_valid_data)
+Test that submitting valid data creates a new department and redirects. ... ok
+test_delete_department_view_post (tests.test_preset_management.test_department_views.DepartmentViewsTest.test_delete_department_view_post)
+Test that POSTing to the delete view removes the department. ... ok
+test_department_list_view_forbidden_for_regular_user 
+(tests.test_preset_management.test_department_views.DepartmentViewsTest.test_department_list_view_forbidden_for_regular_user)
+Test that a regular user without list_department permission gets redirected/forbidden. ... ok
+test_department_list_view_renders_template_for_admin 
+(tests.test_preset_management.test_department_views.DepartmentViewsTest.test_department_list_view_renders_template_for_admin)
+Test that department list view returns 200 and renders the correct template for superuser. ... ok
+test_edit_department_view_get (tests.test_preset_management.test_department_views.DepartmentViewsTest.test_edit_department_view_get)
+Test that the edit department view loads correctly. ... ok
+test_edit_department_view_post_valid_data 
+(tests.test_preset_management.test_department_views.DepartmentViewsTest.test_edit_department_view_post_valid_data)
+Test editing an existing department updates its data. ... ok
+test_employee_company_dependencies_rejects_out_of_scope_company_for_non_superuser (tests.test_preset_management.test_employee_dependencies.EmployeeDependen
+cyTests.test_employee_company_dependencies_rejects_out_of_scope_company_for_non_superuser) ... ok
+test_employee_company_dependencies_returns_exact_company_options 
+(tests.test_preset_management.test_employee_dependencies.EmployeeDependencyTests.test_employee_company_dependencies_returns_exact_company_options) ... ok
+test_employee_delete_returns_blocker_message_when_employee_is_referenced 
+(tests.test_preset_management.test_employee_dependencies.EmployeeDependencyTests.test_employee_delete_returns_blocker_message_when_employee_is_referenced) 
+... ok
+test_employee_detail_context_matches_related_objects 
+(tests.test_preset_management.test_employee_dependencies.EmployeeDependencyTests.test_employee_detail_context_matches_related_objects) ... ok
+test_add_employee_view_get (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_add_employee_view_get)
+Test that the add employee view renders the form properly. ... ok
+test_add_employee_view_post_duplicate_data (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_add_employee_view_post_duplicate_data)
+Test that submitting a duplicate employee code returns to the form with errors. ... ok
+test_add_employee_view_post_invalid_data (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_add_employee_view_post_invalid_data)
+Test that submitting invalid data returns to the form with errors. ... ok
+test_add_employee_view_post_valid_data (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_add_employee_view_post_valid_data)
+Test that submitting valid data creates a new employee and redirects. ... ok
+test_delete_employee_view_get (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_delete_employee_view_get)
+Test that the delete confirmation view loads correctly on GET. ... ok
+test_delete_employee_view_post (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_delete_employee_view_post)
+Test that POSTing to the delete view removes the employee and renders the confirmation. ... ok
+test_edit_employee_view_get (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_edit_employee_view_get)
+Test that the edit employee view loads correctly. ... ok
+test_edit_employee_view_post_valid_data (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_edit_employee_view_post_valid_data)
+Test editing an existing employee updates its data. ... ok
+test_employee_detail_view (tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_employee_detail_view)
+Test that the employee detail view renders properly. ... ok
+test_employee_list_view_forbidden_for_regular_user 
+(tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_employee_list_view_forbidden_for_regular_user)
+Test that a regular user without list_employee permission gets redirected/forbidden. ... ok
+test_employee_list_view_renders_template_for_admin 
+(tests.test_preset_management.test_employee_views.EmployeeViewsTest.test_employee_list_view_renders_template_for_admin)
+Test that employee list view returns 200 and renders the correct template for superuser. ... ok
+test_add_position_view_get (tests.test_preset_management.test_position_views.PositionViewsTest.test_add_position_view_get)
+Test that the add position view renders the form properly. ... ok
+test_add_position_view_post_invalid_data (tests.test_preset_management.test_position_views.PositionViewsTest.test_add_position_view_post_invalid_data)
+Test that submitting invalid data returns to the form with errors. ... ok
+test_add_position_view_post_valid_data (tests.test_preset_management.test_position_views.PositionViewsTest.test_add_position_view_post_valid_data)
+Test that submitting valid data creates a new position and redirects. ... ok
+test_delete_position_view_get (tests.test_preset_management.test_position_views.PositionViewsTest.test_delete_position_view_get)
+Test that the delete confirmation view loads correctly on GET. ... ok
+test_delete_position_view_post (tests.test_preset_management.test_position_views.PositionViewsTest.test_delete_position_view_post)
+Test that POSTing to the delete view removes the position and renders the confirmation. ... ok
+test_edit_position_view_get (tests.test_preset_management.test_position_views.PositionViewsTest.test_edit_position_view_get)
+Test that the edit position view loads correctly. ... ok
+test_edit_position_view_post_valid_data (tests.test_preset_management.test_position_views.PositionViewsTest.test_edit_position_view_post_valid_data)
+Test editing an existing position updates its data. ... ok
+test_position_list_view_forbidden_for_regular_user 
+(tests.test_preset_management.test_position_views.PositionViewsTest.test_position_list_view_forbidden_for_regular_user)
+Test that a regular user without list_Positions permission gets redirected/forbidden. ... ok
+test_position_list_view_renders_template_for_admin 
+(tests.test_preset_management.test_position_views.PositionViewsTest.test_position_list_view_renders_template_for_admin)
+Test that position list view returns 200 and renders the correct template for superuser. ... ok
+test_branch_company_access_saves_exact_selected_company_mapping 
+(tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTests.test_branch_company_access_saves_exact_selected_company_mapping) ... ok
+test_branch_list_company_filter_returns_exact_rows 
+(tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTests.test_branch_list_company_filter_returns_exact_rows) ... ok
+test_department_list_company_filter_returns_exact_rows 
+(tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTests.test_department_list_company_filter_returns_exact_rows) ... ok
+test_employee_list_filters_return_exact_expected_employees 
+(tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTests.test_employee_list_filters_return_exact_expected_employees) ... ok
+test_non_superuser_employee_list_excludes_out_of_scope_employees_exactly (tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTest
+s.test_non_superuser_employee_list_excludes_out_of_scope_employees_exactly) ... ok
+test_position_list_company_and_department_filter_returns_exact_rows 
+(tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTests.test_position_list_company_and_department_filter_returns_exact_rows) 
+... ok
+test_team_list_company_and_department_filter_returns_exact_rows 
+(tests.test_preset_management.test_scoped_filter_accuracy.ScopedFilterAccuracyTests.test_team_list_company_and_department_filter_returns_exact_rows) ... 
+Superuser loading accessible employees
+ok
+test_add_team_view_get (tests.test_preset_management.test_team_views.TeamViewsTest.test_add_team_view_get)
+Test that the add team view renders the form properly. ... ok
+test_add_team_view_post_invalid_data (tests.test_preset_management.test_team_views.TeamViewsTest.test_add_team_view_post_invalid_data)
+Test that submitting invalid data returns to the form with errors. ... ok
+test_add_team_view_post_valid_data (tests.test_preset_management.test_team_views.TeamViewsTest.test_add_team_view_post_valid_data)
+Test that submitting valid data creates a new team and redirects. ... ok
+test_delete_team_view_get (tests.test_preset_management.test_team_views.TeamViewsTest.test_delete_team_view_get)
+Test that the delete confirmation view loads correctly on GET. ... ok
+test_delete_team_view_post (tests.test_preset_management.test_team_views.TeamViewsTest.test_delete_team_view_post)
+Test that POSTing to the delete view removes the team and renders the confirmation. ... ok
+test_edit_team_view_get (tests.test_preset_management.test_team_views.TeamViewsTest.test_edit_team_view_get)
+Test that the edit team view loads correctly. ... ok
+test_edit_team_view_post_valid_data (tests.test_preset_management.test_team_views.TeamViewsTest.test_edit_team_view_post_valid_data)
+Test editing an existing team updates its data. ... ok
+test_team_detail_view (tests.test_preset_management.test_team_views.TeamViewsTest.test_team_detail_view)
+Test that the team detail view renders properly. ... ok
+test_team_list_view_forbidden_for_regular_user (tests.test_preset_management.test_team_views.TeamViewsTest.test_team_list_view_forbidden_for_regular_user)
+Test that a regular user without list_Team permission gets redirected/forbidden. ... ok
+test_team_list_view_renders_template_for_admin (tests.test_preset_management.test_team_views.TeamViewsTest.test_team_list_view_renders_template_for_admin)
+Test that team list view returns 200 and renders the correct template for superuser. ... Superuser loading accessible employees
+ok
+Setting employee_id: EMP_QR_001
+test_list_all_attendance_renders (tests.test_qr_code.test_attendance_views.AttendanceViewsTest.test_list_all_attendance_renders)
+User attendance list renders correctly. ... ok
+Setting employee_id: EMP_QR_001
+test_add_bluetooth_info_get (tests.test_qr_code.test_bluetooth_views.BluetoothViewsTest.test_add_bluetooth_info_get)
+GET renders the blank bluetooth creation form. ... ok
+test_add_bluetooth_info_post_valid (tests.test_qr_code.test_bluetooth_views.BluetoothViewsTest.test_add_bluetooth_info_post_valid)
+POST with valid data creates a bluetooth record. ... ok
+test_bluetooth_info_list_renders (tests.test_qr_code.test_bluetooth_views.BluetoothViewsTest.test_bluetooth_info_list_renders)
+Bluetooth info list renders correctly for superuser. ... ok
+test_delete_bluetooth_by_id_get (tests.test_qr_code.test_bluetooth_views.BluetoothViewsTest.test_delete_bluetooth_by_id_get)
+GET removes the bluetooth from the DB and redirects. ... ok
+test_edit_bluetooth_info_get (tests.test_qr_code.test_bluetooth_views.BluetoothViewsTest.test_edit_bluetooth_info_get)
+GET renders the edit form with existing bluetooth data. ... ok
+test_edit_bluetooth_info_post_valid (tests.test_qr_code.test_bluetooth_views.BluetoothViewsTest.test_edit_bluetooth_info_post_valid)
+POST updates the bluetooth record. ... ok
+Setting employee_id: EMP_QR_001
+test_add_network_info_get (tests.test_qr_code.test_network_views.NetworkViewsTest.test_add_network_info_get)
+GET renders the blank network creation form. ... ok
+test_add_network_info_post_invalid (tests.test_qr_code.test_network_views.NetworkViewsTest.test_add_network_info_post_invalid)
+POST with missing required name stays on form without creating a record. ... ok
+test_add_network_info_post_valid (tests.test_qr_code.test_network_views.NetworkViewsTest.test_add_network_info_post_valid)
+POST with valid data (no GPS ΓåÆ no QR image) creates a network record. ... ok
+test_delete_network_by_id_get (tests.test_qr_code.test_network_views.NetworkViewsTest.test_delete_network_by_id_get)
+GET renders the delete confirmation page. ... ok
+test_delete_network_by_id_post (tests.test_qr_code.test_network_views.NetworkViewsTest.test_delete_network_by_id_post)
+POST removes the network from the DB and redirects. ... ok
+test_edit_network_info_get (tests.test_qr_code.test_network_views.NetworkViewsTest.test_edit_network_info_get)
+GET renders the edit form with existing network data. ... ok
+test_edit_network_info_post_valid (tests.test_qr_code.test_network_views.NetworkViewsTest.test_edit_network_info_post_valid)
+POST updates the network ISP name in the DB. ... ok
+test_network_list_renders (tests.test_qr_code.test_network_views.NetworkViewsTest.test_network_list_renders)
+Network list renders and contains the pre-created network. ... ok
+Setting employee_id: EMP_QR_001
+test_attendance_queryset_for_user_returns_exact_accessible_rows 
+(tests.test_qr_code.test_qr_access_scope.QRAccessScopeTest.test_attendance_queryset_for_user_returns_exact_accessible_rows) ... Setting employee_id: 
+EMP_QR_001
+Setting employee_id: EMP_QR_999
+ok
+test_network_queryset_for_user_returns_exact_accessible_rows 
+(tests.test_qr_code.test_qr_access_scope.QRAccessScopeTest.test_network_queryset_for_user_returns_exact_accessible_rows) ... ok
+test_qr_generation_queryset_for_user_returns_exact_accessible_rows 
+(tests.test_qr_code.test_qr_access_scope.QRAccessScopeTest.test_qr_generation_queryset_for_user_returns_exact_accessible_rows) ... ok
+test_scanner_queryset_for_user_returns_exact_accessible_rows 
+(tests.test_qr_code.test_qr_access_scope.QRAccessScopeTest.test_scanner_queryset_for_user_returns_exact_accessible_rows) ... ok
+test_select_network_generate_qr_context_contains_exact_expected_choices 
+(tests.test_qr_code.test_qr_access_scope.QRAccessScopeTest.test_select_network_generate_qr_context_contains_exact_expected_choices) ... ok
+Setting employee_id: EMP_QR_001
+test_add_and_edit_qr_generation_persist_consistent_hash_payload_and_image_data 
+(tests.test_qr_code.test_qr_computation.QRComputationTest.test_add_and_edit_qr_generation_persist_consistent_hash_payload_and_image_data) ... ok
+test_download_qr_code_corresponds_to_correct_qr_record 
+(tests.test_qr_code.test_qr_computation.QRComputationTest.test_download_qr_code_corresponds_to_correct_qr_record) ... ok
+test_qr_hash_changes_when_payload_relevant_fields_change 
+(tests.test_qr_code.test_qr_computation.QRComputationTest.test_qr_hash_changes_when_payload_relevant_fields_change) ... ok
+test_qr_hash_is_stable_for_unchanged_records (tests.test_qr_code.test_qr_computation.QRComputationTest.test_qr_hash_is_stable_for_unchanged_records) ... ok
+test_qr_payload_contains_exact_branch_gps_description_data 
+(tests.test_qr_code.test_qr_computation.QRComputationTest.test_qr_payload_contains_exact_branch_gps_description_data) ... ok
+Setting employee_id: EMP_QR_001
+test_add_qr_data_generation_get (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_add_qr_data_generation_get)
+GET renders the blank QR data generation form. ... ok
+test_add_qr_data_generation_post_invalid (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_add_qr_data_generation_post_invalid)
+POST with missing required GPS stays on the form without creating a record. ... ok
+test_add_qr_data_generation_post_valid (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_add_qr_data_generation_post_valid)
+POST with valid data creates a QR data generation entry (mocking image saving). ... ok
+test_delete_qr_data_by_id_post (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_delete_qr_data_by_id_post)
+POST removes the QR data entry from the DB. ... ok
+test_edit_qr_data_generation_get (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_edit_qr_data_generation_get)
+GET renders the edit form with existing QR data. ... ok
+test_edit_qr_data_generation_post_valid (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_edit_qr_data_generation_post_valid)
+POST updates the QR entry description in the DB (mocking image saving). ... ok
+test_qr_data_list_renders (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_qr_data_list_renders)
+QR data generation list renders correctly for superuser. ... ok
+test_select_network_generate_qr_renders (tests.test_qr_code.test_qr_data_views.QRDataViewsTest.test_select_network_generate_qr_renders)
+Generate QR form renders correctly. ... ok
+test_qr_form_branch_validation (tests.test_qr_code.test_qr_logic.QRLogicTest.test_qr_form_branch_validation) ... ok
+test_scanner_form_employee_validation (tests.test_qr_code.test_qr_logic.QRLogicTest.test_scanner_form_employee_validation) ... Loaded employee scope for 
+accessible employees
+Accessible employee queryset resolved for company scope
+Loaded employee scope for accessible employees
+Accessible employee queryset resolved for company scope
+ok
+Setting employee_id: EMP_QR_001
+test_add_scanner_tma_get (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_add_scanner_tma_get)
+GET renders the blank attendance user creation form. ... Superuser loading accessible employees
+ok
+test_add_scanner_tma_post_invalid (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_add_scanner_tma_post_invalid)
+POST with missing employee stays on form and does not create a record. ... Superuser loading accessible employees
+ok
+test_add_scanner_tma_post_valid (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_add_scanner_tma_post_valid)
+POST with valid data creates an attendance user record. ... Superuser loading accessible employees
+ok
+test_delete_scanner_tma_post (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_delete_scanner_tma_post)
+POST to delete URL removes the attendance user from the DB. ... Superuser bypassed employee access check
+ok
+test_edit_scanner_tma_get (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_edit_scanner_tma_get)
+GET renders the edit form with existing scanner data. ... Superuser bypassed employee access check
+Superuser loading accessible employees
+ok
+test_edit_scanner_tma_post_valid (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_edit_scanner_tma_post_valid)
+POST updates the scanner's tg_id. ... Superuser bypassed employee access check
+Superuser loading accessible employees
+ok
+test_scanner_list_renders (tests.test_qr_code.test_scanner_tma_views.ScannerTMAViewsTest.test_scanner_list_renders)
+Attendance user list renders correctly for superuser. ... ok
+test_computed_status_absent_and_missing_scans 
+(tests.test_shift.test_attendance_report_computation.AttendanceReportComputationTest.test_computed_status_absent_and_missing_scans)
+Test missing scans logic for absent tracking. ... ok
+test_computed_status_late_early (tests.test_shift.test_attendance_report_computation.AttendanceReportComputationTest.test_computed_status_late_early)
+Test the late and early computation logic using grace periods. ... ok
+test_computed_status_on_time (tests.test_shift.test_attendance_report_computation.AttendanceReportComputationTest.test_computed_status_on_time)
+Test on-time arrival within grace period. ... ok
+test_worked_hours_math (tests.test_shift.test_attendance_report_computation.AttendanceReportComputationTest.test_worked_hours_math)
+Test weekly work hours math summing. ... ok
+test_attendance_team_base_shift_edit_get (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_base_shift_edit_get) ... ok
+test_attendance_team_manual_shifts_renders (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_manual_shifts_renders) ... ok
+test_attendance_team_manual_staff_renders (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_manual_staff_renders) ... ok
+test_attendance_team_plan_calendar_renders (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_plan_calendar_renders) ... ok
+test_attendance_team_plan_detail_renders (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_plan_detail_renders) ... ok
+test_attendance_team_plan_edit_renders (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_plan_edit_renders) ... ok
+test_attendance_team_plan_list_renders (tests.test_shift.test_shift_admin_views.ShiftAdminViewsTest.test_attendance_team_plan_list_renders) ... ok
+test_public_holiday_create_get (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_create_get)
+GET renders the blank public holiday form. ... ok
+test_public_holiday_create_post_invalid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_create_post_invalid)
+POST with missing holiday name stays on the form. ... ok
+test_public_holiday_create_post_valid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_create_post_valid)
+POST with valid data creates a holiday and redirects. ... ok
+test_public_holiday_delete_get (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_delete_get)
+GET on the delete URL renders the confirmation page. ... ok
+test_public_holiday_delete_post (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_delete_post)
+POST to delete URL removes the public holiday from the DB. ... ok
+test_public_holiday_edit_get (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_edit_get)
+GET renders the edit form with existing holiday data. ... ok
+test_public_holiday_edit_post_valid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_edit_post_valid)
+POST with valid data updates the holiday and redirects. ... ok
+test_public_holiday_list_renders (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_public_holiday_list_renders)
+Public holiday list shows pre-created holiday. ... ok
+test_shift_create_view_get (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_create_view_get)
+GET renders the blank shift creation form. ... ok
+test_shift_create_view_post_invalid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_create_view_post_invalid)
+POST with missing required name stays on the form and does not create a record. ... ok
+test_shift_create_view_post_valid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_create_view_post_valid)
+POST with valid data creates the shift in the DB. ... ok
+test_shift_delete_view_get (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_delete_view_get)
+GET on the delete URL renders a confirmation page. ... ok
+test_shift_delete_view_post (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_delete_view_post)
+POST to delete URL removes the shift from the DB. ... ok
+test_shift_edit_view_get (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_edit_view_get)
+GET renders the edit form pre-filled with shift data. ... ok
+test_shift_edit_view_post_invalid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_edit_view_post_invalid)
+POST with empty name returns to the form without saving. ... ok
+test_shift_edit_view_post_valid (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_edit_view_post_valid)
+POST with valid data updates the shift name and code in the DB. ... ok
+test_shift_list_view_renders_for_admin (tests.test_shift.test_shift_core_views.ShiftViewsTest.test_shift_list_view_renders_for_admin)
+Superuser can see the shift list with existing data. ... ok
+test_assign_user_to_shift_get (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_assign_user_to_shift_get) ... Superuser loading 
+accessible employees
+ok
+test_assign_user_to_shift_post (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_assign_user_to_shift_post) ... Superuser loading 
+accessible employees
+Superuser loading accessible employees
+ok
+test_employee_shift_delete_post (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_employee_shift_delete_post) ... Superuser bypassed 
+employee access check
+ok
+test_employee_shift_edit_get (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_employee_shift_edit_get) ... Superuser bypassed 
+employee access check
+Superuser loading accessible employees
+ok
+test_employee_shift_edit_post (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_employee_shift_edit_post) ... Superuser bypassed 
+employee access check
+Superuser loading accessible employees
+ok
+test_employee_shift_list_renders (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_employee_shift_list_renders) ... ok
+test_list_teams_renders (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_list_teams_renders) ... ok
+test_view_team_shifts_renders (tests.test_shift.test_shift_employee_views.ShiftEmployeeViewsTest.test_view_team_shifts_renders) ... ok
+active_shifts==> <QuerySet [<ShiftModel: Morning>, <ShiftModel: Full Day>, <ShiftModel: Night>]>
+scheduled_start==> 2023-01-01 08:00:00+07:00
+scheduled_end==> 2023-01-01 12:00:00+07:00
+score==> 3300.0
+best_shift==> Morning
+scheduled_start==> 2023-01-01 09:00:00+07:00
+scheduled_end==> 2023-01-01 18:00:00+07:00
+score==> 900.0
+best_shift==> Full Day
+scheduled_start==> 2023-01-01 22:00:00+07:00
+scheduled_end==> 2023-01-01 06:00:00+07:00
+score==> 89700.0
+best_shift==> Full Day
+test_guess_shift_full_day (tests.test_shift.test_shift_logic.ShiftLogicTest.test_guess_shift_full_day) ... ok
+active_shifts==> <QuerySet [<ShiftModel: Morning>, <ShiftModel: Full Day>, <ShiftModel: Night>]>
+scheduled_start==> 2023-01-01 08:00:00+07:00
+scheduled_end==> 2023-01-01 12:00:00+07:00
+score==> 300.0
+best_shift==> Morning
+scheduled_start==> 2023-01-01 09:00:00+07:00
+scheduled_end==> 2023-01-01 18:00:00+07:00
+score==> 24600.0
+best_shift==> Morning
+scheduled_start==> 2023-01-01 22:00:00+07:00
+scheduled_end==> 2023-01-01 06:00:00+07:00
+score==> 114600.0
+best_shift==> Morning
+test_guess_shift_morning_half_day (tests.test_shift.test_shift_logic.ShiftLogicTest.test_guess_shift_morning_half_day) ... ok
+active_shifts==> <QuerySet [<ShiftModel: Morning>, <ShiftModel: Full Day>, <ShiftModel: Night>]>
+scheduled_start==> 2023-01-01 08:00:00+07:00
+scheduled_end==> 2023-01-01 12:00:00+07:00
+score==> 50100.0
+best_shift==> Morning
+scheduled_start==> 2023-01-01 09:00:00+07:00
+scheduled_end==> 2023-01-01 18:00:00+07:00
+score==> 90000.0
+best_shift==> Morning
+scheduled_start==> 2023-01-01 22:00:00+07:00
+scheduled_end==> 2023-01-01 06:00:00+07:00
+score==> 600.0
+best_shift==> Night
+test_guess_shift_night_overnight (tests.test_shift.test_shift_logic.ShiftLogicTest.test_guess_shift_night_overnight) ... ok
+test_public_holiday_form_invalid_day (tests.test_shift.test_shift_logic.ShiftLogicTest.test_public_holiday_form_invalid_day) ... ok
+test_shift_form_duplicate_code (tests.test_shift.test_shift_logic.ShiftLogicTest.test_shift_form_duplicate_code) ... ok
+test_manager_shift_assignment_renders (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_assignment_renders) ... ok
+test_manager_shift_dashboard_renders (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_dashboard_renders) ... ok
+test_manager_shift_history_renders (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_history_renders) ... ok
+test_manager_shift_management_renders (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_management_renders) ... ok
+test_manager_shift_plan_create_get (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_plan_create_get) ... ok
+test_manager_shift_plan_create_post (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_plan_create_post) ... ok
+test_manager_shift_plan_delete_post (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_plan_delete_post) ... ok
+test_manager_shift_team_renders (tests.test_shift.test_shift_manager_views.ShiftManagerViewsTest.test_manager_shift_team_renders) ... ok
+test_list_report_attendance_renders (tests.test_shift.test_shift_report_views.ShiftReportViewsTest.test_list_report_attendance_renders) ... ok
+test_update_attendance_note_post (tests.test_shift.test_shift_report_views.ShiftReportViewsTest.test_update_attendance_note_post) ... Superuser bypassed 
+employee access check
+ok
+test_dashboard_current_plan_resolution (tests.test_shift.test_team_plan_computation.TeamPlanComputationTest.test_dashboard_current_plan_resolution)
+Test the current_plan resolves properly in admin context. ... ok
+test_manual_shift_options_logic (tests.test_shift.test_team_plan_computation.TeamPlanComputationTest.test_manual_shift_options_logic)
+Test manual shift exclusion and staff selection. ... ok
+test_schedule_context_computation (tests.test_shift.test_team_plan_computation.TeamPlanComputationTest.test_schedule_context_computation)
+Test exact schedule rows output, assignment precedence, and leave/holiday cell statuses. ... ok
+test_total_hours_computation (tests.test_shift.test_team_plan_computation.TeamPlanComputationTest.test_total_hours_computation)
+Test exact total hours per employee row. ... ok
+test_add_group_view_get (tests.test_user_group.test_group_views.GroupViewsTest.test_add_group_view_get)
+Test GET form for add_group. ... ok
+test_add_group_view_post_duplicate (tests.test_user_group.test_group_views.GroupViewsTest.test_add_group_view_post_duplicate)
+Test adding duplicate group name fails. ... ok
+test_add_group_view_post_valid (tests.test_user_group.test_group_views.GroupViewsTest.test_add_group_view_post_valid)
+Test creating a new group. ... ok
+test_delete_group_view_post (tests.test_user_group.test_group_views.GroupViewsTest.test_delete_group_view_post)
+Test delete action POST. ... ok
+test_edit_group_view_get (tests.test_user_group.test_group_views.GroupViewsTest.test_edit_group_view_get)
+Test GET form for edit_group. ... ok
+test_edit_group_view_post_valid (tests.test_user_group.test_group_views.GroupViewsTest.test_edit_group_view_post_valid)
+Test editing a group. ... ok
+test_group_list_view_admin (tests.test_user_group.test_group_views.GroupViewsTest.test_group_list_view_admin)
+Test admin can view the list. ... ok
+test_group_list_view_forbidden (tests.test_user_group.test_group_views.GroupViewsTest.test_group_list_view_forbidden)
+Test regular user access is denied. ... ok
+test_dashboard_choice_view_get (tests.test_users.test_auth_views.AuthViewsTest.test_dashboard_choice_view_get)
+Test dashboard choice rendering for dual-role user. ... ok
+test_index_view_get (tests.test_users.test_auth_views.AuthViewsTest.test_index_view_get)
+Test admin dashboard index. ... ok
+test_user_login_view_get (tests.test_users.test_auth_views.AuthViewsTest.test_user_login_view_get)
+Test GET request to login page. ... ok
+test_user_login_view_post_inactive (tests.test_users.test_auth_views.AuthViewsTest.test_user_login_view_post_inactive)
+Test POST request with inactive user. ... ok
+test_user_login_view_post_invalid (tests.test_users.test_auth_views.AuthViewsTest.test_user_login_view_post_invalid)
+Test POST request with invalid credentials. ... ok
+test_user_login_view_post_valid (tests.test_users.test_auth_views.AuthViewsTest.test_user_login_view_post_valid)
+Test POST request with valid credentials. ... ok
+test_web_logout_view (tests.test_users.test_auth_views.AuthViewsTest.test_web_logout_view)
+Test logout action. ... ok
+test_add_edit_user_permission_persists_exact_selected_permission_ids 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_add_edit_user_permission_persists_exact_selected_permission_ids) ... ok
+test_assign_user_to_group_creates_exactly_one_membership 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_assign_user_to_group_creates_exactly_one_membership) ... ok
+test_dashboard_choice_routing_for_admin_only_user 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_dashboard_choice_routing_for_admin_only_user) ... ok
+test_dashboard_choice_routing_for_dual_role_user 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_dashboard_choice_routing_for_dual_role_user) ... ok
+test_dashboard_choice_routing_for_manager_only_user 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_dashboard_choice_routing_for_manager_only_user) ... ok
+test_list_user_returns_exact_company_scoped_queryset_for_non_superuser 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_list_user_returns_exact_company_scoped_queryset_for_non_superuser) ... ok
+test_remove_user_from_group_removes_only_the_targeted_membership 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_remove_user_from_group_removes_only_the_targeted_membership) ... ok
+test_view_group_users_context_matches_actual_group_membership_exactly 
+(tests.test_users.test_dashboard_and_scope.DashboardAndScopeTests.test_view_group_users_context_matches_actual_group_membership_exactly) ... ok
+test_add_edit_user_permission_get (tests.test_users.test_permission_views.PermissionViewsTest.test_add_edit_user_permission_get)
+Test GET form for directly editing a user's permissions. ... ok
+test_add_edit_user_permission_post (tests.test_users.test_permission_views.PermissionViewsTest.test_add_edit_user_permission_post)
+Test POST form for directly editing a user's permissions. ... ok
+test_assign_user_to_group_get (tests.test_users.test_permission_views.PermissionViewsTest.test_assign_user_to_group_get)
+Test GET form for assigning user to a group. ... ok
+test_assign_user_to_group_post_duplicate (tests.test_users.test_permission_views.PermissionViewsTest.test_assign_user_to_group_post_duplicate)
+Test assigning a user to a group they are already in. ... ok
+test_assign_user_to_group_post_valid (tests.test_users.test_permission_views.PermissionViewsTest.test_assign_user_to_group_post_valid)
+Test assigning a user to a group via POST. ... ok
+test_remove_user_from_group (tests.test_users.test_permission_views.PermissionViewsTest.test_remove_user_from_group)
+Test removing a user from a group. ... ok
+test_add_user_view_get (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_add_user_view_get)
+Test GET form for adding user. ... ok
+test_add_user_view_post_duplicate (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_add_user_view_post_duplicate)
+Test POST request with already assigned employee. ... ok
+test_add_user_view_post_invalid (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_add_user_view_post_invalid)
+Test POST request with missing required data. ... ok
+test_add_user_view_post_valid (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_add_user_view_post_valid)
+Test POST request to create a user. ... ok
+test_delete_user_view_get (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_delete_user_view_get)
+Test GET confirmation page for deleting user. ... ok
+test_delete_user_view_post (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_delete_user_view_post)
+Test POST request to delete user. ... ok
+test_detail_user_view_get (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_detail_user_view_get)
+Test GET request to view user details. ... ok
+test_edit_user_view_get (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_edit_user_view_get)
+Test GET form for editing user. ... ok
+test_edit_user_view_post_valid (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_edit_user_view_post_valid)
+Test POST request to update a user. ... ok
+test_list_user_view_get (tests.test_users.test_user_crud_views.UserCrudViewsTest.test_list_user_view_get)
+Test GET request to list users. ... ok
+
+----------------------------------------------------------------------
+Ran 290 tests in 82.707s
+
+OK
+Destroying test database for alias 'default' ('test_hr_db')...
