@@ -1,104 +1,126 @@
-# Internship Defense Presentation Draft
+**Slide 1: Title Slide**
 
-## Slide 1: Title Slide
-*   **Topic:** AttendancS.I Group Co., Ltd.)
-*   **Name:** Phy Vathane Management System & Leave Request Platform Integration
-*   **Company:** SINET (ak
-*   **Role:** Software Developer Intern
+- **Topic:** Attendance System
+- **Name:** Phy Vathanak
+- **Company:** SINET
+- **Role:** Software Developer Intern
 
-## Slide 2: Introduction to Company (SINET)
-*   **Profile:** A specialist Internet and Telecom Service Provider in Cambodia focusing on engineering excellence and reliable support. Operates under S.I Group Co. Ltd.
-*   **History:** Established in 2009. Expanded infrastructure nationwide with over 200 network POPs covering cities, provinces, and remote areas.
-*   **Products & Services:** 
-    *   Fiber internet and enterprise connectivity solutions.
-    *   Telecom infrastructure and corporate network solutions (DWDM, SDH, Metro Ethernet).
-    *   Nationwide technical support services.
+**Slide 2: Introduction to Company (SINET)**
 
-## Slide 3: My Role
-*   **Position:** Software Developer Intern
-*   **Department:** Engineering & Operations Department
-*   **Core Responsibility:** Developing, maintaining, and extending the company's internal HR Attendance and Leave Management platforms.
+- **Profile:** A specialist Internet and Telecom Service Provider in Cambodia focusing on engineering excellence and reliable support. Operates under S.I Group Co. Ltd.
+- **History:** Established in 2009. Expanded infrastructure nationwide with over 200 network POPs covering cities, provinces, and remote areas.
+- **Products & Services:**
+    - Fiber internet and enterprise connectivity solutions.
+    - Telecom infrastructure and corporate network solutions (DWDM, SDH, Metro Ethernet).
 
-## Slide 4: Problem Statement (Why build QR Attendance?)
-*   **Previous Era:** SINET used physical biometric scanners.
-*   **The Problem:** High hardware costs, difficult to manage across many remote branches, and long queues for staff checking in.
-*   **The Solution:** The company shifted to a QR-based attendance system via Telegram to centralize data and reduce hardware dependency.
+**Slide 3: My Role**
 
-## Slide 5: Existing System
-*   **What was already there:** A basic QR-code check-in/check-out system accessible via a Telegram Mini App.
-*   **Core Function:** Captured check-in times and mapped them to basic branch locations.
+- **Position:** Software Developer Intern
+- **Department:** Engineering & Operations Department
+- **Core Responsibility:** Developing, maintaining, and extending the company's internal Attendance platforms.
 
-## Slide 6: Current Challenge
-*   **Incomplete Rules:** The system could not handle flexible working schedules or varied shifts.
-*   **Data Privacy:** No data isolation between different companies under the S.I Group.
-*   **Manual Workload:** HR still processed leaves manually and had to calculate missing attendance by hand.
-*   **Performance:** The database queries were slow as the system grew.
+**Slide 4: Problem Statement**
 
-## Slide 7: Objectives
-*   **Automate HR Operations:** Reduce manual attendance tracking and payroll deduction calculations.
-*   **Enhance System Scalability:** Re-architect the system to securely support multiple sister companies under S.I Group.
-*   **Improve User Experience:** Make attendance scanning and leave requests completely seamless for staff via Telegram.
-*   **Ensure Data Accuracy:** Eliminate missing attendance records through automated system checks.
+- **Previous Era:** SINET used physical biometric scanners.
+- **The Problem:**
+    - **Manual HR Process:** Time-consuming attendance and shift management.
+    - **Long Check-in Queues:** Slow attendance registration during peak times.
+    - **Remote Branch Management:** Difficult to manage attendance across multiple locations.
+- **The Solution:** The company built their own QR-based attendance system via Telegram.
 
-## Slide 8: Literature Review
-*   **CheckinMe (Commercial SaaS):** Evaluated existing SaaS platforms. They offer great features but lack custom workflow flexibility and force company data onto third-party servers.
-*   **SINET's Approach:** Using Telegram internally ensures high user adoption (since it's popular in Cambodia) and guarantees complete internal data ownership.
+**Slide 5: Existing System**
 
-## Slide 9: Features That I Already Built
-*   **Company Isolation:** Strict dynamic filtering so HR only sees their own company's staff.
-*   **Shift Engine:** Automated logic to determine exactly when a staff member should be working (Base Shifts, Manager Plans).
-*   **Daily Automation:** Scripts that run every morning to automatically detect missing check-ins/outs.
-*   **Leave Request Platform:** Mobile request forms, multi-tier Telegram Approval Bots, and Web Calendars.
+- A QR-code check-in/check-out system accessible via a Telegram Mini App.
 
-## Slide 10: Methodology & Team Workflow
-*   **Approach:** Incremental Development Approach.
-*   **Professional Workflow (3 Parts):**
-    *   **1. Task Assignment:** Received direct tasks and goals from the **CTO**.
-    *   **2. Technical & Deployment:** Discussed development concepts and coordinated live deployment with **Senior Developers**.
-    *   **3. End-User Interaction:** Met directly with staff and HR to clarify requirements, gather feedback, and provide support when they faced system issues.
+**Limitation**
 
-## Slide 11: Tools I Used to Build
-*   **Frontend:** React.js / Next.js, Bootstrap, Telegram Mini App SDK.
-*   **Backend:** Python (Django Rest Framework), Node.js (Next.js API).
-*   **Database:** PostgreSQL, Prisma ORM.
-*   **Infrastructure:** Docker, Docker Compose, Nginx.
+- **Incomplete Rules:** The system could not handle SINET business rules.
+- **Manual Workload:** HR still processed manually and had to calculate missing attendance by hand.
+- **Performance:** The database queries were slow as the system grew.
 
-## Slide 12: Implementation (Use Case & ERD Concept)
-*   **System Roles (Use Case):** 
-    *   **Staff:** Request leave, check-in via QR.
-    *   **Team Lead:** Plan team shifts, approve/reject leaves via Telegram bot.
-    *   **Admin:** Manage HR reports and company leave balances.
-    *   **Super Admin:** Configure system settings and audit logs.
-*   **ERD Concept:** Linking `Users` to their `Shifts`, `Attendance Records`, and `Leaves`. 
-*(Note: Briefly show this and move on to the sequence diagrams!)*
+**Slide 7: Objectives**
 
-## Slide 13: Implementation (Sequence Diagrams)
-*   **Concept 1: Attendance Scan Flow**
-    *   Staff scans DeepLink QR -> Mini App fetches GPS -> Backend validates location & network -> Attendance recorded.
-*   **Concept 2: Leave Request Flow**
-    *   Staff submits leave via Mini App -> Next.js API triggers Webhook -> Manager approves via Bot -> HR approves -> Database updates.
+- **Automate HR Operations:** Eliminate manual attendance tracking and **reduce administrative workload** through an automated attendance management system.
+- **Enhance System Scalability:** Optimize the existing system architecture to **improve performance, reliability, and data accuracy** while supporting future organizational growth.
+- **Improve User Experience:** Deliver a more intuitive system for users to make it less confusing.
 
-## Slide 14: Deployment Strategies
-*   **Data Migration Planning:** Safely partitioned legacy data between companies without corrupting historical payroll.
-*   **QA Testing:** Conducted strict Unit testing for edge cases, and E2E (End-to-End) testing on physical devices before release.
-*   **Pre-Release Simulation:** Tested all migrations and Docker builds on a staging server first.
-*   **Rollback Strategy:** Maintained physical backups and marker-based rollback scripts to ensure we could revert instantly if a production bug occurred.
+**Slide 8: Literature Review**
 
-## Slide 15: Findings, Conclusion & What I Learned
-*   **Core Findings:**
-    *   Time tracking is now highly accurate based on shifts, completely removing manual HR calculations.
-    *   Staff can check in instantly using the fast camera DeepLink.
-    *   Leaves are now permanently recorded in the system history for management and HR, replacing old manual Excel sheets and Redmine tracking.
-*   **What I Learned:**
-    *   How to integrate Python/Django with Next.js/React.
-    *   How to safely manage and migrate a live-production database.
-*   **Conclusion:** Delivered an enterprise-grade platform that is actively improving SINET’s daily operations.
+- **CheckinMe (Commercial SaaS):** Evaluated existing SaaS platforms. They offer great features but lack custom workflow flexibility and force company data onto third-party servers.
 
-## Slide 16: Video Demo
-*   **1. Attendance Scan (Staff):** Scanning the QR code instantly via the camera DeepLink.
-*   **2. Shift Management (Team Lead):** Showing how a manager assigns a shift plan for their team.
-*   **3. Leave Request (Staff to HR):** Requesting a leave on the Mini App and approving it via the Telegram Bot.
-*   **4. HR Processing (Admin):** Generating the daily attendance and deduction reports on the Back Office.
+**Slide 9: Core Features**
 
----
-*(End of Presentation)*
+- **Deep Link QR:** Camera-based QR check-in/check-out.
+- **Company Isolation:** Secure multi-company data access.
+- **Shift & Schedule Management:** Flexible schedules and work planning.
+- **HR Reports:** Attendance, monthly summaries, and payroll deductions.
+- **Leave Management:** Telegram leave requests with approval workflow.
+
+**Slide 10: Methodology & Team Workflow**
+
+- **Approach:** Incremental Development Approach.
+- **Workflow:** Analysis Requirement → Dev → Testing → Release
+- **Professional Workflow (3 Parts):**
+    1. **Task Assignment:** Received direct tasks and goals from the CTO.
+    2. **Technical & Deployment:** Discussed development concepts and coordinated live deployment with Senior Developers.
+    3. **End-User Interaction:** Met directly with staff and HR to clarify requirements, gather feedback, and provide support when they faced system issues.
+
+**Slide 11: Tools & Technology**
+
+- **Frontend:** Next.js, Bootstrap, Tailwind CSS.
+- **Backend:** Python (Django), Node.js (Next.js App Routing).
+- **Database:** PostgreSQL.
+- **Tools:** Docker, Nginx, Telegram.
+
+**Slide 12: Implementation (Use Case & ERD Concept)**
+
+- **System Roles (Use Case):**
+    - **Staff:** Request leave, check in via QR.
+    - **Team Lead:** Plan team shifts, approve/reject leaves.
+    - **Admin:** Manage HR reports and company leave balances.
+    - **Super Admin:** Perform full actions, audit logs, add new company.
+
+**Slide 13: Implementation (Sequence Diagrams)**
+
+- **Concept 1: Attendance Scan Flow**
+    - Staff scans DeepLink QR -> Mini App fetches GPS -> Backend validates location & network -> Attendance recorded.
+- **Concept 2: Leave Request Flow**
+    - Staff submits leave via Mini App -> Next.js API triggers Webhook -> Manager approves via Bot -> HR approves -> Database updates.
+
+**Slide 14: Release Strategies**
+
+- **Migration & Rollback Planning:** Prepared database migration and rollback plans before deployment.
+- **Local Testing:** Verified functionality and conducted end-to-end (E2E) testing in the local development environment.
+- **Pre-Production Simulation:** Simulated the complete deployment process in the pre-production environment, including migrations and rollback scripts,  before production.
+
+| **Phase** | **Date** | **Focus Area & Changes Deployed** |
+| --- | --- | --- |
+| Release 1 | 13-May-2026 | Server-side optimization (pagination, search, export) and attendance report improvements. |
+| Release 2 | 21-May-2026 | Shift plan driven attendance, manager scheduling dashboard, and daily attendance automation. |
+| Release 3 | 05-Jun-2026 | Company structure isolation, audit logging, recycle bin recovery, and expanded leave handling. |
+| Release 4 | 16-Jun-2026 | Leave replacement, manual time selection, centralized action logs, UI upgrades, and Mini App modularization. |
+| Release 5 | 1-July-2026 | In-system User Manuals, FAQs, Manager Excel import, shift and leave improvement. |
+| Release 6 | 18-July-2026 ( might be) | Leave Request Platform |
+
+**Slide 15: Findings, Conclusion & What I Learned**
+
+- **Core Findings:**
+    - Removing manual HR work via a system providing reports and flexible shift work.
+    - Staff can check in instantly using the fast camera DeepLink.
+    - Leaves are now permanently recorded in the system history for management and HR.
+- **Lessons Learned:**
+    - How to integrate Python/Django with Next.js/React.
+    - How to safely manage and migrate a live-production database.
+
+**Slide 16: Video Demo**
+
+1. **Attendance Scan (Staff):** Scanning the QR code instantly via the camera DeepLink.
+2. **Shift Management (Team Lead):** Showing how a manager assigns a shift plan for their team.
+3. **Leave Request (Staff to HR):** Requesting leave on the Mini App and approving it via the Telegram Bot.
+4. **HR Processing (Admin):** Generating the daily attendance and deduction reports on the Back Office.
+
+**Slide 17-End: Resources**
+
+- Testing result
+- ERD
+- Log
